@@ -153,11 +153,45 @@ plot(mortDat$Sizecm, mortDat$Collision, pch = "|", xlab = "Manatee size, cm",
 points(mdf$Sizecm, mdf$Collision, pch = "|", col = "blue")
 points(mdm$Sizecm, mdm$Collision, pch = "|", col = "green")
 range(mortDat$Sizecm)
+xv <- mdm$Sizecm
+xv
+xv1 <- mdf$Sizecm
+xv1
+xv2 <- c(rep("M", length(xv)), rep("F", length(xv1)))
+xv2
+look <- data.frame(Sizecm= c(xv, xv1), Sex= xv2)
+look
+str(look)
+str(mortDat)
+look$fit <- predict(m3, newdata = look, type = "response")
+str(look)
+
+points(look$Sizecm[look$Sex == "M"],
+      look$fit[look$Sex == "M"],
+      col = "green")
+points(look$Sizecm[look$Sex == "F"], 
+      look$fit[look$Sex == "F"],
+      col = "blue")
+text(110,.2, "M", col = "green")
+text(110,.75, "F", col = "blue")
+
+
+#### VGM Style Analysis ####
+
+
+
+#edit fail
+
+plot(mortDat$Sizecm, mortDat$Collision, pch = "|", xlab = "Manatee size, cm",
+     ylab = "Collision")
+points(mdf$Sizecm, mdf$Collision, pch = "|", col = "blue")
+points(mdm$Sizecm, mdm$Collision, pch = "|", col = "green")
+range(mortDat$Sizecm)
 xv <- range(mortDat$Sizecm)[1]:range(mortDat$Sizecm)[2]
 xv
-xv2 <- c(rep("M", length(xv)), rep("F", length(xv)))
+xv2 <- c(rep("M", length(mdm$Sex)), rep("F", length(mdf$Sex)))
 xv2
-look <- data.frame(Sizecm= c(xv, xv), Sex= xv2)
+look <- data.frame(Sizecm= c(mdm$Sizecm, mdf$Sizecm), Sex= xv2)
 look
 str(look)
 str(mortDat)
@@ -173,7 +207,12 @@ text(110,.2, "M", col = "green")
 text(110,.75, "F", col = "blue")
 
 
-#### VGM Style Analysis ####
+
+library(vegan)
+library(MASS) 
+
+
+
 
 library("VGAM")
 ps.options(pointsize = 12)
