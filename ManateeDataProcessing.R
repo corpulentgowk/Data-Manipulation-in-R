@@ -99,6 +99,7 @@ plot(Collision ~ Sizecm, mortDat, pch = "|",  xlab = "Manatee size(cm)",
 plot(mortDat$Sizecm, mortDat$Collision, pch = "|")
 mdm <- mortDat[mortDat$Sex == "M",]
 mdf <- mortDat[mortDat$Sex == "F",]
+mdc <- mortDat[(mortDat$Sex == "M") | (mortDat$Sex == "F")  ,]
 points(mdf$Sizecm, mdf$Collision, pch = "|", col = "blue") # Mort Dat Female
 points(mdm$Sizecm, mdm$Collision, pch = "|", col = "green")  # Mort Dat Male
 
@@ -126,18 +127,14 @@ aggregate(Sizecm ~ Collision, mortDat, mean)
 
 #### 4 select best model via backward elimination
 
-m1 <- glm(Collision ~ Sizecm*Sex, data = mortDat, family = binomial)
-m2 <- glm(Collision ~ Sizecm + Sex, data=mortDat, family = binomial)
-m3 <- glm(Collision ~ Sizecm, data=mortDat, family = binomial)
-m4 <- glm(Collision ~ Sex, data=mortDat, family = binomial)
-
-anova(m1, m2, test= "Chi") # m4 better
-anova(m2, m4, test= "Chi") # m4 better
-anova(m2, m3, test= "Chi") # m3 better
-anova(m3, m4, test= "Chi") # No probability??? shreggy
-
-summary(m3)
-summary(m4)
+m1 <- glm(Collision ~ Sizecm*Sex,   data=mdc, family = binomial)
+m2 <- glm(Collision ~ Sizecm + Sex, data=mdc, family = binomial)
+m3 <- glm(Collision ~ Sizecm,       data=mdc, family = binomial)
+m4 <- glm(Collision ~ Sex,          data=mdc, family = binomial)
+mNull <- glm(Collision ~ 1,         data=mdc, family = binomial)
+mdc
+anova(m1, m2, test= "Chi") # m1 bettermdc
+anova(m1, mNull, test= "Chi") # m4 better
 
 ####Check The Models ####
 par(mfcol=c(2,1))
@@ -197,9 +194,8 @@ xv2 <- c(rep("M", length(xv)), rep("F", length(xv1)))
 look <- data.frame(Sizecm= c(xv, xv1), Sex= xv2)
 str(look)
 str(mortDat)
-look$fit <- predict(m3, newdata = look, type = "response")
+look$fit <- predict(m1, newdata = look, type = "response")
 str(look)
-
 points(look$Sizecm[look$Sex == "M"],
        look$fit[look$Sex == "M"],
        pch = "+",
@@ -207,9 +203,15 @@ points(look$Sizecm[look$Sex == "M"],
 points(look$Sizecm[look$Sex == "F"], 
        look$fit[look$Sex == "F"],
        col = "blue")
-text(110,.8, "M", col = "green")
-text(110,.75, "F", col = "blue")
+text(370,.7, "M", col = "green")
+text(405,.7, "F", col = "blue")
 
+coef(m1)
+coef(m1)[1]
+coef(m1)[3]
+abline(coef(m1)[1], coef(m1)[4], col = "red")
+abline(coef(m0)[1] + coef(m0)[2], coef(m0)[3] + coef(m0)[4], col = "blue")
+abline(coef(m0)[1] + coef(m0)[2], coef(m0)[3] + coef(m0)[4], col = "blue")
 # Season and Collision
 
 wc <- mortDat[mortDat['Collision'] == TRUE, ]
@@ -234,6 +236,8 @@ anova(mt,mn, test="Chi")
 #P-Value < .0001, Keep it in. 
 
 ## Collision and 
+
+##visualizign a model
 
 library(vegan)
 library(MASS) 
