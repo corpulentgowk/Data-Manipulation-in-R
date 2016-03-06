@@ -87,7 +87,7 @@ aggregate(Collision ~ Region, mortDat, length)
 max(aggregate(Collision ~ Waterway, mortDat, length)["Collision"]) # Single water way with 1162. Wow. 
 aggregate(Collision ~ County, mortDat, length) # Much more meaningful
 
-min(aggregate(Collision ~ Waterway, mortDat, length))
+#min(aggregate(Collision ~ Waterway, mortDat, length))
 plot(Collision ~ Sizecm, mortDat)      # interesting
 plot(Collision ~ Sizecm, mortDat, pch = "|",  xlab = "Manatee size(cm)",
      ylab = "Collision", main="Collision Vs Manatee Size")      # interesting
@@ -178,8 +178,6 @@ text(110,.75, "F", col = "blue")
 
 #### VGM Style Analysis ####
 
-
-
 #edit fail
 
 plot(mortDat$Sizecm, mortDat$Collision, pch = "|", xlab = "Manatee size, cm",
@@ -211,11 +209,60 @@ text(110,.75, "F", col = "blue")
 library(vegan)
 library(MASS) 
 
-
-
-
 library("VGAM")
 ps.options(pointsize = 12)
 options(width = 72, digits = 4)
 options(SweaveHooks = list(fig = function() par(las = 1)))
 options(prompt = "R> ", continue = "+")
+
+####CEMENTING####
+
+library(MuMIn)
+#Model Selection
+
+mortD <- mortDat[!(mortDat["Sex"] == "U"),]
+
+options(na.action = "na.fail")
+subset <- mortD[c("Season","Sizecm","County", "Region", "Sex", "Waterway", "Collision")]
+subset <- mortD[c("Sizecm","Region", "Sex", "Season","Collision")]
+fm1 <- glm(Collision ~ Sizecm*Region*Sex*Season, data = subset, family = binomial, na.action = na.fail)
+dd <- dredge(fm1)
+
+globmod <- glm(Collision ~ Sizecm*Region*Sex*Season, data = subset, family = binomial, na.action = na.fail)
+
+varying.link <- list(family = alist(
+  logit = binomial("logit"),
+  probit = binomial("probit"),
+  cloglog = binomial("cloglog")
+))
+
+(ms12 <- dredge(globmod, varying = varying.link,
+                rank = AIC))
+
+#STEP AIC Method#
+
+model <- glm(Collision ~ Sizecm*Region*Sex*Season, data = mortD, family = binomial, na.action = na.fail)
+summary(model)
+# AIC: 8906.3
+model2 <- step(model)
+summary(model2)
+
+#resulting model
+orig <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
+      Region:Sex + Sizecm:Season + Region:Season + Sex:Season + 
+      Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
+
+orig2 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
+      Region:Sex + Sizecm:Season + Region:Season + 
+      Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
+anova(orig,orig2,test="Chi") #Put this in the powerpointP = 0.1689
+#There is no persuasvie evidence of a Sex:Season Term
+
+orig3 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
+               Region:Sex + Sizecm:Season + Region:Season, family = binomial, data = mortD, na.action = na.fail)
+
+anova(orig2,orig3,test="Chi") # Show in slides. Some evidence of an importance with this term. #However we do get a reduction in AIC 8887.3 - 8877.8 versus 
+
+#Decided that the best model was the one with those reductions to the stepAIC technique. Matching the model that came from the 
+#Dredging technique. 
+model3 <- update(model2, formula=drop.terms(model2$terms, c("Region:Sex:Season"), keep.response=TRUE)  )
