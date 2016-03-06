@@ -1,3 +1,4 @@
+#INIT DATA FRAMES
 mortDat <- read.csv("https://www.dropbox.com/s/jsfh8rq2ez0wsj8/ReformattedManateeMortalityData.csv?dl=1")
 cReg <- read.csv("https://www.dropbox.com/s/mpxmf4qn7aelr9v/CountyRegions.csv?dl=1")
 
@@ -81,7 +82,9 @@ names(mortDat)[names(mortDat)=="Size..cm."] <- "Sizecm"
 
 mortDat["Collision"] <- ifelse(mortDat$Probable.Cause == "Human Related: Watercraft Collision", T, F)
 
+#DATA FRAMES INITIALIZED
 
+#AGGREGATION ON DATA
 aggregate(Collision ~ Sex, mortDat, length)
 aggregate(Collision ~ Region, mortDat, length)
 max(aggregate(Collision ~ Waterway, mortDat, length)["Collision"]) # Single water way with 1162. Wow. 
@@ -96,6 +99,7 @@ plot(Collision ~ Sizecm, mortDat, pch = "|",  xlab = "Manatee size(cm)",
 plot(mortDat$Sizecm, mortDat$Collision, pch = "|")
 mdm <- mortDat[mortDat$Sex == "M",]
 mdf <- mortDat[mortDat$Sex == "F",]
+mdc <- mortDat[(mortDat$Sex == "M") | (mortDat$Sex == "F")  ,]
 points(mdf$Sizecm, mdf$Collision, pch = "|", col = "blue") # Mort Dat Female
 points(mdm$Sizecm, mdm$Collision, pch = "|", col = "green")  # Mort Dat Male
 
@@ -123,18 +127,14 @@ aggregate(Sizecm ~ Collision, mortDat, mean)
 
 #### 4 select best model via backward elimination
 
-m1 <- glm(Collision ~ Sizecm*Sex, data = mortDat, family = binomial)
-m2 <- glm(Collision ~ Sizecm + Sex, data=mortDat, family = binomial)
-m3 <- glm(Collision ~ Sizecm, data=mortDat, family = binomial)
-m4 <- glm(Collision ~ Sex, data=mortDat, family = binomial)
-
-anova(m1, m2, test= "Chi") # m4 better
-anova(m2, m4, test= "Chi") # m4 better
-anova(m2, m3, test= "Chi") # m3 better
-anova(m3, m4, test= "Chi") # No probability??? shreggy
-
-summary(m3)
-summary(m4)
+m1 <- glm(Collision ~ Sizecm*Sex,   data=mdc, family = binomial)
+m2 <- glm(Collision ~ Sizecm + Sex, data=mdc, family = binomial)
+m3 <- glm(Collision ~ Sizecm,       data=mdc, family = binomial)
+m4 <- glm(Collision ~ Sex,          data=mdc, family = binomial)
+mNull <- glm(Collision ~ 1,         data=mdc, family = binomial)
+mdc
+anova(m1, m2, test= "Chi") # m1 bettermdc
+anova(m1, mNull, test= "Chi") # m4 better
 
 ####Check The Models ####
 par(mfcol=c(2,1))
@@ -176,38 +176,76 @@ text(110,.2, "M", col = "green")
 text(110,.75, "F", col = "blue")
 
 
-#### VGM Style Analysis ####
+
 
 #edit fail
+
+#### VGM Style Analysis ####
+
+
+#Visulization section
+#Collision as modeled by Size and Sex 
+
 
 plot(mortDat$Sizecm, mortDat$Collision, pch = "|", xlab = "Manatee size, cm",
      ylab = "Collision")
 points(mdf$Sizecm, mdf$Collision, pch = "|", col = "blue")
 points(mdm$Sizecm, mdm$Collision, pch = "|", col = "green")
 range(mortDat$Sizecm)
-xv <- range(mortDat$Sizecm)[1]:range(mortDat$Sizecm)[2]
-xv
-xv2 <- c(rep("M", length(mdm$Sex)), rep("F", length(mdf$Sex)))
-xv2
-look <- data.frame(Sizecm= c(mdm$Sizecm, mdf$Sizecm), Sex= xv2)
-look
+xv <- mdm$Sizecm
+xv1 <- mdf$Sizecm
+xv2 <- c(rep("M", length(xv)), rep("F", length(xv1)))
+look <- data.frame(Sizecm= c(xv, xv1), Sex= xv2)
 str(look)
 str(mortDat)
-look$fit <- predict(m3, newdata = look, type = "response")
+look$fit <- predict(m1, newdata = look, type = "response")
 str(look)
-lines(look$Sizecm[look$Sex == "M"],
-      look$fit[look$Sex == "M"],
-      col = "green")
-lines(look$Sizecm[look$Sex == "F"], 
-      look$fit[look$Sex == "F"],
-      col = "blue")
-text(110,.2, "M", col = "green")
-text(110,.75, "F", col = "blue")
+points(look$Sizecm[look$Sex == "M"],
+       look$fit[look$Sex == "M"],
+       pch = "+",
+       col = "green")
+points(look$Sizecm[look$Sex == "F"], 
+       look$fit[look$Sex == "F"],
+       col = "blue")
+text(370,.7, "M", col = "green")
+text(405,.7, "F", col = "blue")
 
+coef(m1)
+coef(m1)[1]
+coef(m1)[3]
+abline(coef(m1)[1], coef(m1)[4], col = "red")
+abline(coef(m0)[1] + coef(m0)[2], coef(m0)[3] + coef(m0)[4], col = "blue")
+abline(coef(m0)[1] + coef(m0)[2], coef(m0)[3] + coef(m0)[4], col = "blue")
+# Season and Collision
 
+wc <- mortDat[mortDat['Collision'] == TRUE, ]
+nc <- mortDat[mortDat['Collision'] == FALSE, ]
+
+aggregate(Collision ~ Season, wc, length) #Some Evidence of a difference by Season. 
+# Season Collision
+# 1   Fall       371
+# 2 Spring       660
+# 3 Summer       578
+# 4 Winter       538
+
+season = wc["Season"]
+season.freq = table(season)
+barplot(season.freq)
+colors = c("brown", "green", "yellow", "blue") 
+barplot(season.freq, col=colors, 	legend = rownames(season.freq), main="Number of Collisions ")
+
+mn <- glm(Collision ~ 1, data = mortDat, family = binomial)
+mt <- glm(Collision ~ Season, data = mortDat, family = binomial)
+anova(mt,mn, test="Chi")
+#P-Value < .0001, Keep it in. 
+
+## Collision and 
+
+##visualizign a model
 
 library(vegan)
 library(MASS) 
+
 
 library("VGAM")
 ps.options(pointsize = 12)
@@ -266,3 +304,4 @@ anova(orig2,orig3,test="Chi") # Show in slides. Some evidence of an importance w
 #Decided that the best model was the one with those reductions to the stepAIC technique. Matching the model that came from the 
 #Dredging technique. 
 model3 <- update(model2, formula=drop.terms(model2$terms, c("Region:Sex:Season"), keep.response=TRUE)  )
+
