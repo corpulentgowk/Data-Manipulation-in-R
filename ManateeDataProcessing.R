@@ -1,3 +1,4 @@
+#INIT DATA FRAMES
 mortDat <- read.csv("https://www.dropbox.com/s/jsfh8rq2ez0wsj8/ReformattedManateeMortalityData.csv?dl=1")
 cReg <- read.csv("https://www.dropbox.com/s/mpxmf4qn7aelr9v/CountyRegions.csv?dl=1")
 
@@ -81,7 +82,9 @@ names(mortDat)[names(mortDat)=="Size..cm."] <- "Sizecm"
 
 mortDat["Collision"] <- ifelse(mortDat$Probable.Cause == "Human Related: Watercraft Collision", T, F)
 
+#DATA FRAMES INITIALIZED
 
+#AGGREGATION ON DATA
 aggregate(Collision ~ Sex, mortDat, length)
 aggregate(Collision ~ Region, mortDat, length)
 max(aggregate(Collision ~ Waterway, mortDat, length)["Collision"]) # Single water way with 1162. Wow. 
@@ -176,46 +179,62 @@ text(110,.2, "M", col = "green")
 text(110,.75, "F", col = "blue")
 
 
+
 #### VGM Style Analysis ####
 
 
-
-#edit fail
+#Visulization section
+#Collision as modeled by Size and Sex 
 
 plot(mortDat$Sizecm, mortDat$Collision, pch = "|", xlab = "Manatee size, cm",
      ylab = "Collision")
 points(mdf$Sizecm, mdf$Collision, pch = "|", col = "blue")
 points(mdm$Sizecm, mdm$Collision, pch = "|", col = "green")
 range(mortDat$Sizecm)
-xv <- range(mortDat$Sizecm)[1]:range(mortDat$Sizecm)[2]
-xv
-xv2 <- c(rep("M", length(mdm$Sex)), rep("F", length(mdf$Sex)))
-xv2
-look <- data.frame(Sizecm= c(mdm$Sizecm, mdf$Sizecm), Sex= xv2)
-look
+xv <- mdm$Sizecm
+xv1 <- mdf$Sizecm
+xv2 <- c(rep("M", length(xv)), rep("F", length(xv1)))
+look <- data.frame(Sizecm= c(xv, xv1), Sex= xv2)
 str(look)
 str(mortDat)
 look$fit <- predict(m3, newdata = look, type = "response")
 str(look)
-lines(look$Sizecm[look$Sex == "M"],
-      look$fit[look$Sex == "M"],
-      col = "green")
-lines(look$Sizecm[look$Sex == "F"], 
-      look$fit[look$Sex == "F"],
-      col = "blue")
-text(110,.2, "M", col = "green")
+
+points(look$Sizecm[look$Sex == "M"],
+       look$fit[look$Sex == "M"],
+       pch = "+",
+       col = "green")
+points(look$Sizecm[look$Sex == "F"], 
+       look$fit[look$Sex == "F"],
+       col = "blue")
+text(110,.8, "M", col = "green")
 text(110,.75, "F", col = "blue")
 
+# Season and Collision
 
+wc <- mortDat[mortDat['Collision'] == TRUE, ]
+nc <- mortDat[mortDat['Collision'] == FALSE, ]
+
+aggregate(Collision ~ Season, wc, length) #Some Evidence of a difference by Season. 
+# Season Collision
+# 1   Fall       371
+# 2 Spring       660
+# 3 Summer       578
+# 4 Winter       538
+
+season = wc["Season"]
+season.freq = table(season)
+barplot(season.freq)
+colors = c("brown", "green", "yellow", "blue") 
+barplot(season.freq, col=colors, 	legend = rownames(season.freq), main="Number of Collisions ")
+
+mn <- glm(Collision ~ 1, data = mortDat, family = binomial)
+mt <- glm(Collision ~ Season, data = mortDat, family = binomial)
+anova(mt,mn, test="Chi")
+#P-Value < .0001, Keep it in. 
+
+## Collision and 
 
 library(vegan)
 library(MASS) 
 
-
-
-
-library("VGAM")
-ps.options(pointsize = 12)
-options(width = 72, digits = 4)
-options(SweaveHooks = list(fig = function() par(las = 1)))
-options(prompt = "R> ", continue = "+")
