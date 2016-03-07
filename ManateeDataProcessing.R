@@ -245,7 +245,18 @@ anova(mt,mn, test="Chi")
 
 library(vegan)
 library(MASS) 
+alt <- mortDat[,c("Region", "Sex", "Sizecm", "Season")]
+#as.numeric(factor(alt$Region , levels=unique(alt[, 1])))
+alt$Region <- as.numeric(factor(alt$Region , levels=unique(alt$Region)))
+alt$Sex <- as.numeric(factor(alt$Sex , levels=unique(alt$Sex)))
+alt$Season <- as.numeric(factor(alt$Season , levels=unique(alt$Season)))
 
+
+c.mds <- metaMDS(alt, zerodist="add") 
+str(c.mds)
+par(mfcol = c(1,1))
+fig <- ordiplot(c.mds, type = "none")
+points(fig, "sites", pch=21, col="black", bg="white", cex=1.1)
 
 library("VGAM")
 ps.options(pointsize = 12)
