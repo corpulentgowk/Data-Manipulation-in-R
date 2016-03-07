@@ -245,7 +245,8 @@ anova(mt,mn, test="Chi")
 
 library(vegan)
 library(MASS) 
-alt <- mortDat[,c("Region", "Sex", "Sizecm", "Season")]
+#alt <- mortDat[,c("Region", "Sex", "Sizecm", "Season")]
+alt <- mortDat[,c("Region", "Sex", "Sizecm")]
 #as.numeric(factor(alt$Region , levels=unique(alt[, 1])))
 alt$Region <- as.numeric(factor(alt$Region , levels=unique(alt$Region)))
 alt$Sex <- as.numeric(factor(alt$Sex , levels=unique(alt$Sex)))
