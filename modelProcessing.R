@@ -134,10 +134,13 @@ summary(model2)
 orig <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
               Region:Sex + Sizecm:Season + Region:Season + Sex:Season + 
               Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
+#AIC: 8878.7
 
 orig2 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
-               Region:Sex + Sizecm:Season + Region:Season + 
+               Region:Sex + Sizecm:Season + Region:Season + #Removed Sex:Season
                Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
+#AIC: 8877.8
+
 anova1 <- anova(orig,orig2,test="Chi") #Put this in the powerpointP = 0.1689
 #There is no persuasvie evidence of a Sex:Season Term
 colnames(anova1)[5] <- "P-value"
@@ -145,12 +148,26 @@ colnames(anova1)[5] <- "P-value"
 anova1 <- anova1[, c(6, 1:5)]
 xtable(anova1)
 
-
-
 orig3 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
-               Region:Sex + Sizecm:Season + Region:Season, family = binomial, data = mortD, na.action = na.fail)
+               Region:Sex + Region:Season + #Removed Sizecm:Season
+               Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
+#AIC: 8877.8
+anova2 <- anova(orig2,orig3,test="Chi") #Put this in the powerpointP = 0.1689
+#There is no persuasvie evidence of a Sex:Season Term
+colnames(anova2)[5] <- "P-value"
+#anova2$Model <- as.character(2:1)
+anova2 <- anova2[, c(6, 1:5)]
+xtable(anova2)
 
-anova2 <-anova(orig2,orig3,test="Chi") # Show in slides. Some evidence of an importance with this term. #However we do get a reduction in AIC 8887.3 - 8877.8 versus 
+
+
+
+
+orig4 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
+               Region:Sex + Sizecm:Season + Region:Season, family = binomial, data = mortD, na.action = na.fail)
+#AIC: 8887.3
+
+anova2 <-anova(orig2,orig4,test="Chi") # Show in slides. Some evidence of an importance with this term. #However we do get a reduction in AIC 8887.3 - 8877.8 versus 
 colnames(anova2)[5] <- "P-value"
 #anova2$Model <- as.character(2:1)
 anova2 <- anova2[, c(6, 1:5)]
