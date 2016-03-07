@@ -138,14 +138,23 @@ orig <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex +
 orig2 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
                Region:Sex + Sizecm:Season + Region:Season + 
                Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
-anova(orig,orig2,test="Chi") #Put this in the powerpointP = 0.1689
+anova1 <- anova(orig,orig2,test="Chi") #Put this in the powerpointP = 0.1689
 #There is no persuasvie evidence of a Sex:Season Term
+colnames(anova1)[5] <- "P-value"
+#anova2$Model <- as.character(2:1)
+anova1 <- anova1[, c(6, 1:5)]
+xtable(anova1)
+
+
 
 orig3 <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
                Region:Sex + Sizecm:Season + Region:Season, family = binomial, data = mortD, na.action = na.fail)
 
-anova(orig2,orig3,test="Chi") # Show in slides. Some evidence of an importance with this term. #However we do get a reduction in AIC 8887.3 - 8877.8 versus 
-
+anova2 <-anova(orig2,orig3,test="Chi") # Show in slides. Some evidence of an importance with this term. #However we do get a reduction in AIC 8887.3 - 8877.8 versus 
+colnames(anova2)[5] <- "P-value"
+#anova2$Model <- as.character(2:1)
+anova2 <- anova2[, c(6, 1:5)]
+xtable(anova2)
 #Decided that the best model was the one with those reductions to the stepAIC technique. Matching the model that came from the 
 #Dredging technique. 
 model3 <- update(model2, formula=drop.terms(model2$terms, c("Region:Sex:Season"), keep.response=TRUE)  )
