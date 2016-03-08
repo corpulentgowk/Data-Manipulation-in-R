@@ -24,10 +24,10 @@ for(i in 1:length(cReg$South.Central.East)){
 checker = southCentralWest | northWestCentral | northEastCentral | southCentralEast #Make sure that all the data gets assigned regions. 
 
 mortDat[, "Region"] = ifelse(southCentralWest == T,F,F)
-mortDat[, "Region"][southCentralWest] = "SouthCentralWest"
+mortDat[, "Region"][southCentralWest] = "SouthWestCentral"
 mortDat[, "Region"][northWestCentral] = "NorthWestCentral"
 mortDat[, "Region"][northEastCentral] = "NorthEastCentral"
-mortDat[, "Region"][southCentralEast] = "SouthCentralEast"
+mortDat[, "Region"][southCentralEast] = "SouthEastCentral"
 
 01/01/2014
 winter <- vector(length = length(mortDat$Date)) 
@@ -86,6 +86,15 @@ library(xtable)
 final <- glm(Collision ~ Region + Season + Sex + Sizecm + Region:Season + Region:Sex + Season:Sex + Sex:Sizecm, data = mortD, family = binomial, na.action = na.fail)
 xtable(final)
 
+confid <- confint(final)
+confid[1:25, ] <- round(confid[1:25,], 4)
+xtable(confid)
+
+
+
+
+
+####
 globmod <- glm(Collision ~ Sizecm*Region*Sex*Season, data = subset, family = binomial, na.action = na.fail)
 
 varying.link <- list(family = alist(
