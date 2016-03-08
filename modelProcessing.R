@@ -86,12 +86,16 @@ library(xtable)
 final <- glm(Collision ~ Region + Season + Sex + Sizecm + Region:Season + Region:Sex + Season:Sex + Sex:Sizecm, data = mortD, family = binomial, na.action = na.fail)
 xtable(final)
 
+
+m1 <- glm(Collision ~ Region + Season + Sex + Sizecm + Region:Season + Region:Sex + Season:Sex + Sex:Sizecm, data = mortD, family = binomial, na.action = na.fail)
+
+
 confid <- confint(final)
 confid[1:25, ] <- round(confid[1:25,], 4)
 xtable(confid)
 
 
-
+aTable <- anova(final, glm(Collision ~ 1, data = mortD, family = binomial), test = "Chi") 
 
 
 ####
