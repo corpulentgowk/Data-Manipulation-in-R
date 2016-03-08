@@ -246,18 +246,25 @@ anova(mt,mn, test="Chi")
 library(vegan)
 library(MASS) 
 #alt <- mortDat[,c("Region", "Sex", "Sizecm", "Season")]
-alt <- mortDat[,c("Region", "Sex", "Sizecm")]
+alt <- mortDat[!(mortDat["Sex"] == "U"),]
+alt <- alt[,c("Region", "Sex", "Sizecm")]
+alt <- alt[sample,]
+altR <- alt[sample(1:length(alt$Region), 1000), ]
 #as.numeric(factor(alt$Region , levels=unique(alt[, 1])))
-alt$Region <- as.numeric(factor(alt$Region , levels=unique(alt$Region)))
-alt$Sex <- as.numeric(factor(alt$Sex , levels=unique(alt$Sex)))
-alt$Season <- as.numeric(factor(alt$Season , levels=unique(alt$Season)))
+altR$Region <- as.numeric(factor(altR$Region , levels=unique(alt$Region)))
+altR$Sex <- as.numeric(factor(altR$Sex , levels=unique(alt$Sex)))
+altR$Season <- as.numeric(factor(altR$Season , levels=unique(alt$Season)))
 
 
-c.mds <- metaMDS(alt, zerodist="add") 
+c.mds <- metaMDS(altR, zerodist="add") 
 str(c.mds)
 par(mfcol = c(1,1))
 fig <- ordiplot(c.mds, type = "none")
 points(fig, "sites", pch=21, col="black", bg="white", cex=1.1)
+altR$nmds1 <- c.mds$points[,1]
+altR$nmds2 <- c.mds$points[,2]
+pairs(altR[,4:5], col= rainbow(15)[altR$Sex], pch = 16)
+
 
 library("VGAM")
 ps.options(pointsize = 12)
