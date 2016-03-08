@@ -247,23 +247,24 @@ library(vegan)
 library(MASS) 
 #alt <- mortDat[,c("Region", "Sex", "Sizecm", "Season")]
 alt <- mortDat[!(mortDat["Sex"] == "U"),]
-alt <- alt[,c("Region", "Sex", "Sizecm")]
-alt <- alt[sample,]
+alt <- alt[,c("Region", "Sex", "Sizecm", "Season", "Collision")]
 altR <- alt[sample(1:length(alt$Region), 1000), ]
 #as.numeric(factor(alt$Region , levels=unique(alt[, 1])))
 altR$Region <- as.numeric(factor(altR$Region , levels=unique(alt$Region)))
 altR$Sex <- as.numeric(factor(altR$Sex , levels=unique(alt$Sex)))
 altR$Season <- as.numeric(factor(altR$Season , levels=unique(alt$Season)))
+altR$Collision <- as.numeric(factor(altR$Collision , levels=unique(alt$Collision)))
 
-
-c.mds <- metaMDS(altR, zerodist="add") 
+c.mds <- metaMDS(altR[,1:4], zerodist="add") 
 str(c.mds)
 par(mfcol = c(1,1))
 fig <- ordiplot(c.mds, type = "none")
 points(fig, "sites", pch=21, col="black", bg="white", cex=1.1)
 altR$nmds1 <- c.mds$points[,1]
 altR$nmds2 <- c.mds$points[,2]
-pairs(altR[,4:5], col= rainbow(15)[altR$Sex], pch = 16)
+
+pairs(altR[,6:7], col= c("dodgerblue", "red")[altR$Collision], pch = 4, main = "NMDS for Collision and Non-Collision Communities")
+
 
 
 library("VGAM")

@@ -81,6 +81,11 @@ subset <- mortD[c("Sizecm","Region", "Sex", "Season","Collision")]
 fm1 <- glm(Collision ~ Sizecm*Region*Sex*Season, data = subset, family = binomial, na.action = na.fail)
 dd <- dredge(fm1)
 
+#Selected Model
+library(xtable)
+final <- glm(Collision ~ Region + Season + Sex + Sizecm + Region:Season + Region:Sex + Season:Sex + Sex:Sizecm, data = mortD, family = binomial, na.action = na.fail)
+xtable(final)
+
 globmod <- glm(Collision ~ Sizecm*Region*Sex*Season, data = subset, family = binomial, na.action = na.fail)
 
 varying.link <- list(family = alist(
