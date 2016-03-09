@@ -258,13 +258,15 @@ altR$Collision <- as.numeric(factor(altR$Collision , levels=unique(alt$Collision
 c.mds <- metaMDS(altR[,1:4], zerodist="add") 
 str(c.mds)
 par(mfcol = c(1,1))
-fig <- ordiplot(c.mds, type = "none")
-points(fig, "sites", pch=21, col="black", bg="white", cex=1.1)
+fig <- ordiplot(c.mds, type = "none", main = "NMDS for Collision and Non-Collision Communities")
+points(fig, "sites", pch=21, col=c("dodgerblue", "red")[altR$Collision], bg="white", cex=1.1)
+ordihull(c.mds, altR$Collision == "2", col="white", display = "sites", draw = "polygon")
+
+
 altR$nmds1 <- c.mds$points[,1]
 altR$nmds2 <- c.mds$points[,2]
 
 pairs(altR[,6:7], col= c("dodgerblue", "red")[altR$Collision], pch = 4, main = "NMDS for Collision and Non-Collision Communities")
-
 
 
 library("VGAM")
