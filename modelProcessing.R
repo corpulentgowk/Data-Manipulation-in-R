@@ -84,7 +84,14 @@ dd <- dredge(fm1)
 #Selected Model
 library(xtable)
 final <- glm(Collision ~ Region + Season + Sex + Sizecm + Region:Season + Region:Sex + Season:Sex + Sex:Sizecm, data = mortD, family = binomial, na.action = na.fail)
+maximal <- glm(Collision ~ Sizecm*Region*Sex*Season, data = subset, family = binomial, na.action = na.fail)
+dredgeAnova <- anova(final, maximal, test="Chi")
 xtable(final)
+xtable(dredgeAnova)
+
+
+
+
 
 
 m1 <- glm(Collision ~ Region + Season + Sex + Sizecm + Region:Season + Region:Sex + Season:Sex + Sex:Sizecm, data = mortD, family = binomial, na.action = na.fail)
@@ -195,3 +202,10 @@ xtable(anova2)
 model3 <- update(model2, formula=drop.terms(model2$terms, c("Region:Sex:Season"), keep.response=TRUE)  )
 
 
+
+
+####AIC RESULTS ####
+
+aic <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
+      Region:Sex + Sizecm:Season + Region:Season + Sex:Season + 
+      Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
