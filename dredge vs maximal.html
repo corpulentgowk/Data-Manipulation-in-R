@@ -1,0 +1,3616 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Product">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="Papeeria: free online research tools" />
+<meta property="og:url" content="http://papeeria.com" />
+<meta property="og:image" content="http://www.papeeria.com/assets/all/images/papeeria.png" />
+<meta property="og:description" content="Papeeria includes free collaborative LaTeX editor and plot builder. Templates gallery. Unlimited projects and collaborators." />
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Papeeria" />
+
+<meta itemprop="name" content="Papeeria: free online research tools"/>
+<meta itemprop="description" content="Papeeria includes free collaborative LaTeX editor and plot builder. Templates gallery. Unlimited projects and collaborators."/>
+<meta itemprop="image" content="http://www.papeeria.com/assets/all/images/papeeria.png"/>
+
+<meta name="description" content="Papeeria includes free collaborative LaTeX editor and plot builder. Templates gallery. Unlimited projects and collaborators."/>
+<meta name="keywords" content="LaTeX,latex online,online latex editor,papeeria,online latex compiler,write latex online,латех онлайн,plot builder,latex templates"/>
+<meta name="author" content="BarD Software s.r.o"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Papeeria</title>
+    <link rel="stylesheet" media="screen" href="/assets/2016-02-26/stylesheets/layout-default-1.3.0-rc30.74.min.css">
+    <link rel="stylesheet" media="screen" href="/assets/2016-02-26/stylesheets/bootstrap/bootstrap.min.css">
+    
+  <link rel="stylesheet" media="screen" href="/assets/2016-02-26/stylesheets/editor.min.css">
+  <link rel="stylesheet" media="screen" href="/assets/2016-02-26/stylesheets/bootstrap-tagsinput.min.css">
+  <meta name="fragment" content="!">
+
+    <link rel="shortcut icon" type="image/png" href="/assets/2016-02-26/images/favicon.png">
+  </head>
+  <body>
+    
+
+
+
+
+
+
+<div id="workspace">
+<div class="ui-layout-north" id="north-panel">
+    <div id="project-controls">
+        
+        
+        <div style="position:relative;">
+            <div class="btn-group">
+                <button id="project-dropdown" class="btn btn-small" title='Workspace menu'>
+                    latex
+                </button>
+                <button class="btn btn-small btn-danger dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul id="project-dropdown-list" class="dropdown-menu pull-right">
+                    <li><a href="/u/email/stevenzmanx@yahoo.com">Dashboard</a></li>
+                    <li class="divider"></li>
+
+                    <li><a class="permission-write" id="newDocument" href="javascript:void(0)">New Document&hellip;</a></li>
+                    <li><a class="permission-write" id="newDirectory" href="javascript:void(0)">New Folder&hellip;</a></li>
+                    <li><a class="permission-write" id="uploadFile" href="javascript:void(0)">Upload File&hellip;</a></li>
+                    <li><a class="permission-write show-external-storage-modal" href="javascript:void(0)">Import from URL&hellip;</a></li>
+                    <li class="divider"></li>
+                    <li><a class="permission-write" id="uploadProject" href="javascript:void(0)">Upload Project&hellip;</a></li>
+                    <li><a href="javascript:void(0)" class="downloadProjectAsZip">Download project</a></li>
+
+                    
+                    <li class="divider"></li>
+                    <li><a id="newProjectBtn" href="javascript:void(0)">New Project&hellip;</a></li>
+                    <li><a href="javascript:void(0)" class="cloneProject">Clone Project&hellip;</a></li>
+                    
+                    <li id="projects-list-spinner" class="muted"><i class="icon-spinner icon-spin"></i>&nbsp;Loading projects&hellip;</li>
+                    <li id="owned-projects-header" class="dropdown-submenu">
+                      <a href="javascript:void(0)">My Projects</a>
+                      <ul id="owned-projects-list" class="dropdown-menu"></ul>
+                    </li>
+                    <li id="shared-projects-header" class="dropdown-submenu">
+                      <a href="javascript:void(0)">Shared Projects</a>
+                      <ul id="shared-projects-list" class="dropdown-menu"></ul>
+                    </li>
+                    <li id="recent-projects-header" class="section-header">Recent Projects</li>
+                    <li class="projects-list-item-tpl" style="display: none"><a href="link-to-project">
+                      <i class="icon-none"></i>&nbsp;<span>Project name</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+  <div id="main-toolbar">
+    <div class="btn-group" id="compile-widget">
+      <button class="btn btn-small permission-compile" id="compile-btn" title='Run compilation [Ctrl+F9]'>
+        <i class="icon-none"></i>&nbsp;<span id="compile-btn-lbl">Compile</span>
+        <span id="compile-btn-file"></span>
+      </button>
+      <button class="btn btn-small dropdown-toggle permission-compile" id="compile-dropdown-toggle" data-toggle="dropdown" title='Choose compile target or change settings'>
+        <span class="caret"></span>
+      </button>
+      <ul id="compile-dropdown" class="dropdown-menu">
+        <li class="section-header">Currently open</li>
+        <li id="compile-editor-item"><a href="javascript:void(0)" class="root-file"><i class="icon-none"></i><span></span></a></li>
+        <li id="compile-lru-divider" class="divider hide"></li>
+        <li id="compile-lru-header" class="section-header hide">Recently compiled</li>
+        <li class="divider"></li>
+        <li class="section-header">TeX Options</li>
+        
+          <li class="compiler-item" data-compiler="PDFLATEX">
+            <a class="permission-write" href="javascript:void(0)">
+              <i class="icon-none"></i>
+              <span>&nbsp;Use pdflatex</span>
+            </a>
+          </li>
+        
+          <li class="compiler-item" data-compiler="XELATEX">
+            <a class="permission-write" href="javascript:void(0)">
+              <i class="icon-none"></i>
+              <span>&nbsp;Use xelatex</span>
+            </a>
+          </li>
+        
+        <li data-flag="pgf3">
+          <a class="permission-write" href="javascript:void(0)">
+            <i class="icon-none"></i>
+            <span>&nbsp;Use PGF 3.0</span>
+          </a>
+        </li>
+        <li data-flag="texlive2013">
+          <a class="permission-write" href="javascript:void(0)">
+            <i class="icon-none"></i>
+            <span>&nbsp;Use legacy TeX Live 2013</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-small manual-save-btn hide" title="Save all changes">
+        <i class="icon-save"></i>&nbsp;<span class="text">Save all</span>
+      </button>
+    </div>
+
+    <a class="ads-body-tpl" href="" target="_blank">
+      <div class="left">
+        <span>Ads&nbsp;<i class="icon-caret-right"></i></span>
+      </div>
+      <div class="middle">
+        <img src="">
+      </div>
+      <div class="right">
+        <span class="ad-body"></span>
+      </div>
+    </a>
+    <div class="ads">
+    </div>
+    <div id="pane-alert">
+  <div id="alert-tmpl" class="alert">
+    <span></span><button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+</div>
+
+    <span class="tpl hide load-file-retry-msg">
+  Failed to load file content.
+  <span class="countdown"></span>
+  <a href="javascript:void(0)" class="try-now">Try now.</a>
+</span>
+
+  </div>
+  <div id="login">
+    <div class="btn-group">
+      
+        <button id="search" class="btn btn-small" title="Full-text search [Ctrl+Shift+F]">
+          <i class="icon-search"></i>
+          <span style="margin-right: 2em">&nbsp;Search</span><span class="new-feature">new!</span>
+        </button>
+      
+      
+        <button id="share-project" class="btn btn-small" title="Share project with your colleagues" >
+          <i class="icon-group"></i>
+          &nbsp;Share
+        </button>
+      
+    </div>
+
+    
+
+    
+      
+        
+        
+
+
+
+<button class="btn btn-small notifications-toggle" type="button" disabled>
+  <i class="icon-bell"></i>
+  <span class="badge badge-important unread-notifications-count"></span>
+</button>
+<div class="btn-group">
+  <a class="btn btn-small username" href="/u/email/stevenzmanx@yahoo.com" title='Your dashboard'>
+    stevenzmanx@yahoo.com<i class="icon-user"></i>
+  </a>
+  <a class="btn btn-small" href="/auth/logout" title='Sign out'><i class="icon-signout"></i></a>
+</div>
+
+
+      
+    
+  </div>
+</div>
+<div class="ui-layout-center">
+  <div class="ui-layout-center" id="main-center">
+    <div id="compilation-log" class="ui-layout-south">
+      
+      <table class="table table-condensed" id="compile-table">
+        <tr class="log-record-tpl">
+          <td><a href="javascript:void(0)" class="location"><span class="file"></span>&nbsp;:<span class="line-num"></span></a></td>
+          <td class="text"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="ui-layout-east">
+      <div id="pane-pdf">
+
+
+
+
+
+
+
+
+<div id="viewer-spinner"><i class='icon-spinner icon-spin'></i><br><br>Loading PDF&hellip;</div>
+
+
+
+
+
+<div class="ui-layout-north settings">
+  
+  <div class="btn-collapse btn-window">
+    
+<span>Hide <i class="icon-double-angle-right"></i></span>
+
+  </div>
+  
+  <div class="btn-maximize btn-window">
+    <i class="inactive icon-resize-full"></i>
+    <i class="active icon-resize-small"></i>
+  </div>
+  <div class="pane-settings-collapsed">
+  <a href="" target="_blank" class="btn btn-link btn-small settings-btn" id="download-link"><i class="icon-download"></i>&nbsp;Download PDF</a>
+  <span id="sync-link" title='Auto-refresh viewer when new PDF is available'>
+    <a href="javascript:void(0)" class="btn btn-link btn-small settings-btn active">Refresh: on</a>
+    <a href="javascript:void(0)" class="btn btn-link btn-small settings-btn inactive">Refresh: off</a>
+  </span>
+</div>
+  <div class="pane-settings">
+    <div class="close-controls">
+      <div class="btn-help hide"></div><div class="btn-window btn-hide">Hide&nbsp;<i class="icon-double-angle-up"></i></div>
+    </div>
+    
+<div class="controls">
+  <span id="pdf-viewer-toggle" class="status-bar-elmt">
+    <span class="settings-label switch-to-viewer-label">Switch to</span>
+    <a href="javascript:void(0)" class="btn btn-link btn-small settings-btn" id="pdf-action-google-viewer">Google viewer</a>
+    <a href="javascript:void(0)" class="btn btn-link btn-small settings-btn" id="pdf-action-native-viewer">Native viewer</a>
+  </span>
+</div>
+
+  </div>
+</div>
+
+<div class="compiler-status-tpl hide">
+  <button type="button" class="close" data-hide="alert">&times;</button>
+  <span class="details"></span><br>
+  <span class="tagline"></span>
+</div>
+<div class="compiler-status alert alert-warning hide"></div>
+<div id="viewer" class="ui-layout-center">
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="cheatsheet landing">
+  <h4>Release highlights</h4>
+  
+    <div class="well news-highlights">
+  <p><strong>Full-text search:</strong> search all your files using keywords.
+      Get formatted results from BibTeX files in a separate list.
+  </p>
+  <p>Use <code>Ctrl+Shift+F</code> keyboard shortcut or <code>&#8984;+Shift+F</code> if you're on Mac OSX.
+  </p>
+  <p><a href="http://blog.papeeria.com/search/label/search" target="_blank">Read the details</a> on our blog.</p>
+</div>
+<p class="news-readmore">Stay tuned! Subscribe to <a type="application/atom+xml" rel="alternate" href="http://blog.papeeria.com/feeds/posts/default" target="_blank">our blog</a>, <a href="https://twitter.com/papeeria" target="_blank">follow us on Twitter</a> or join <a href="http://vk.com/papeeria">our group VKontakte</a></p>
+
+    <br><br>
+    <h4>Keyboard shortcuts cheatsheet</h4>
+    <table id="cheatsheet-shortcuts" class="table table-striped">
+      <tbody>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Ctrl+F9</div>
+            <div class="cs-keystroke-mac">&#8984;+F9</div>
+          </td>
+          <td class="cs-desc">Compiles the current compilation target</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Alt+W</div>
+            <div class="cs-keystroke-mac">&#8997;+W</div>
+          </td>
+          <td class="cs-desc">Toggles word wrapping in the editor</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Alt+F1</div>
+            <div class="cs-keystroke-mac">&#8997;+F1</div>
+          </td>
+          <td class="cs-desc">Maximizes editor pane</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Alt+F2</div>
+            <div class="cs-keystroke-mac">&#8997;+F2</div>
+          </td>
+          <td class="cs-desc">Maximizes PDF viewer pane</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Alt+Insert</div>
+            <div class="cs-keystroke-mac">&#8963;+N</div>
+          </td>
+          <td class="cs-desc">Opens editor context menu</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Alt+C</div>
+            <div class="cs-keystroke-mac">&#8997;+C</div>
+          </td>
+          <td class="cs-desc">Toggles collaborators names in the editor</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Ctrl+Alt+M</div>
+            <div class="cs-keystroke-mac">&#8963;+&#8997;+M</div>
+          </td>
+          <td class="cs-desc">Start a new discussion</td>
+        </tr>
+        <tr>
+          <td class="cs-keystroke">
+            <div>Ctrl+Shift+F</div>
+            <div class="cs-keystroke-mac">&#8984;+Shift+F</div>
+          </td>
+          <td class="cs-desc">Full-text search</td>
+        </tr>
+      </tbody>
+    </table>
+  
+</div>
+
+
+
+</div>
+</div>
+      <div id="pane-vcs" class="hide">
+        <div class="ui-layout-north ui-layout-resizer ui-layout-resizer-north-closed">
+          <div class="btn-collapse btn-window">
+          <span>Hide <i class="icon-double-angle-right"></i></span>
+          </div>
+        </div>
+        <div class="ui-layout-center">
+          
+            <div class="vcs-pane-content">
+  <div class="state-loading"><i class="icon-spinner icon-spin"></i>&nbsp;Loading version control details for the project&hellip;</div>
+  <div class="state-error">
+    <span class="text-error">Failed to load version control details.</span>
+    <a href="javascript:void(0)" class="retry">Try again</a>
+  </div>
+  <div class="state-success">
+    <div class="section-header">Git</div>
+    <div class="git">
+      <div class="git-not-linked">
+        <div class="owned">The project is not linked to any git repository.<br>  You can <a href="javascript:void(0)" class="new-project-git">checkout</a> your git repository into new Papeeria project.</div>
+        <div class="not-owned">The project is not linked to any git repository</div>
+      </div>
+      <div class="git-linked row-fluid">
+        <label>
+          <span class="control-label span4">Repository URL</span>
+          <input class="url span6" type="text" disabled="disabled">
+        </label>
+        <div class="http-protocol-warning form-help-text error hide">
+          <span class="span4">&nbsp;</span>
+          <span class="span8"><i class="icon-warning-sign"></i>&nbsp;You can only use SSH protocol to push.
+<span class="can-fix">
+  <button type="button" class="btn btn-link fix">Switch to SSH</button>
+</span>
+<span class="cannot-fix">
+  <a href="/help/git/private-access" target="_blank">Learn more</a>
+</span>
+</span>
+          <span class="clearfix"></span>
+        </div>
+        <label>
+          <span class="control-label span4">Branch</span>
+          <select class="branch span6" disabled="disabled"></select>
+        </label>
+        <label class="new-branch-row hide">
+          <span class="control-label span4">New branch name</span>
+          <input type="text" class="new-branch-name span6" placeholder='papeeria-web'>
+        </label>
+        <div class="checkout-controls">
+          <span class="span1">&nbsp;</span>
+          <div class="span9">
+            <div class="checkout-error text-error hide"></div>
+            <div class="pull-right form-help-text">
+              <button type="button" class="btn btn-link do-checkout">Checkout</button> |
+              <button type="button" class="btn btn-link refresh-branches">Refresh</button>
+            </div>
+          </div>
+          <span class="clearfix"></span>
+        </div>
+        <label>
+          <span class="control-label span4">Folder</span>
+          <select class="root span6" disabled="disabled"></select>
+        </label>
+        <p class="sync-block">
+          <button type="button" class="btn sync-now">Sync now</button><br>
+          <span class="last-sync-date form-help-text"></span><br>
+          <span class="last-sync-revision form-help-text"></span>
+        </p>
+        <p class="merge-conflict-reminder alert alert-warning">
+          <span class="reminder-text"></span><br>
+          <button type="button" class="btn btn-link continue">Resume resolving</button> |
+          <button type="button" class="btn btn-link forget">Dismiss the conflict</button>
+        </p>
+      </div>
+    </div>
+
+    <div class="revisions">
+      <div class="section-header">
+        Snapshots
+        <button type="button" class="btn btn-success btn-mini new state-supported pull-right" title="Create new snapshot">
+          New
+        </button>
+        <span class="clearfix"></span>
+      </div>
+
+      <div class="state-not-supported">
+          <h4>Need snapshots?</h4>
+          <div class="state-owned">
+            <a href="/subscribe/delta" class="btn btn-warning">Upgrade to Delta</a>
+          </div>
+          <div class="state-not-owned"><p>You may want to ask the owner of this project to<br> <a href="/subscribe/delta">upgrade to paid plan Delta</a></p>
+          </div>
+          <p>Project snapshots allow for saving the contents of a project for backup purposes.<br>
+          <strong>This feature is not available on free pricing plan, sorry.</strong> </p>
+
+      </div>
+
+      <div class="state-supported">
+        <div class="chosen-revision-controls">
+          <div class="input-append">
+            <input class="chosen-revision-name" type="text" placeholder="Snapshot name">
+            <button type="button" class="btn btn-small rename" title="Rename selected snapshot">
+            Rename
+            </button>
+          </div>
+
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-small restore" title="Restore project&#x27;s state to this snapshot">
+              Restore
+            </button>
+            <button type="button" class="btn btn-small download" title="Download snapshot as ZIP archive">
+              Download
+            </button>
+          </div>
+          <span class="clearfix"></span>
+        </div>
+
+        <ul class="revisions-list">
+          <li class="revision-tpl hide">
+            <span class="name">VERSION NAME</span>
+            <span class="date pull-right">VERSION CREATION DATE</span>
+            <span class="clearfix"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="ui-layout-center" id="pane-editor"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ui-layout-north settings">
+  
+  <div class="btn-maximize btn-window">
+    <i class="inactive icon-resize-full"></i>
+    <i class="active icon-resize-small"></i>
+  </div>
+  <div class="pane-settings-collapsed">
+  <div id="status-bar-binary">
+    <span class="status-bar-item filename opened-file-name"></span>
+  </div>
+
+<div id="status-bar-text">
+  <span class="status-bar-item filename opened-file-name"></span>
+  <span class="status-bar-item editor-alert"></span>
+  <span class="status-bar-item save-file-status"></span>
+  
+<div class="setting-controls discussions-settings-item">
+  <span class="dropdown">
+    <button class="btn btn-small btn-link settings-btn dropdown-toggle" data-toggle="dropdown">
+      Discussions
+      <span class="icon-caret-down"></span>
+    </button>
+    <ul class="dropdown-menu pull-right">
+      <li id="toggle-discussion-parsing-action">
+        <a class="inactive" href="javascript:void(0)">Turn on</a>
+        <a class="active" href="javascript:void(0)">Turn off</a>
+      </li>
+      <li>
+        <a id="expand-all-discussions-action" href="javascript:void(0)">
+          Show all
+        </a>
+      </li>
+      <li>
+        <a id="collapse-all-discussions-action" href="javascript:void(0)">
+          Hide all
+        </a>
+      </li>
+    </ul>
+  </span>
+</div>
+
+</div>
+
+  <label class="checkbox hide" id="status-bar-csv">
+    <input type="checkbox" class="plot-preview-action" id="plot-preview-action-statusbar">Show plot preview
+  </label>
+</div>
+  <div class="pane-settings">
+    <div class="close-controls">
+      <div class="btn-help hide"></div><div class="btn-window btn-hide">Hide&nbsp;<i class="icon-double-angle-up"></i></div>
+    </div>
+    
+  <div class="settings-controls" id="settings-binary">
+    <span>&nbsp;</span>
+  </div>
+
+<div class="settings-controls" id="settings-default">
+  <span id="toggle-wrapping-action">
+    <a href="javascript:void(0)" class="btn btn-link btn-small settings-btn inactive">Word wrap: off</a>
+    <a href="javascript:void(0)" class="btn btn-link btn-small settings-btn active">Word wrap: on</a>
+  </span>
+
+  <span class="settings-delimeter">|</span>
+
+  <span class="dropdown spellchecker-dropdown">
+    <button id="spellchecker-languages-toggle" class="btn btn-small btn-link settings-btn dropdown-toggle" data-toggle="dropdown">
+      Spellchecker
+      <span class="icon-caret-down"></span>
+    </button>
+    <ul id="spellchecker-languages" class="dropdown-menu pull-right">
+      <li><a href="javascript:void(0)" data-language="NONE" class="active">off</a></li>
+      <li><a href="javascript:void(0)" data-language="en_US">English</a></li>
+      <li><a href="javascript:void(0)" data-language="ru_RU">Russian</a></li>
+      <li><a href="javascript:void(0)" data-language="de_DE">German</a></li>
+      <li><a href="javascript:void(0)" data-language="fr_FR">French</a></li>
+      
+      <li><a href="javascript:void(0)" data-language="es_ES">Spanish</a></li>
+    </ul>
+  </span>
+
+  <span class="settings-delimeter">|</span>
+
+  <label class="settings-label" for="editor-font-size-input">Font Size:</label>
+  <div class="editor-font-size input-append">
+    <input class="editor-font-size-input" id="editor-font-size-input" type="text">
+    <button class="btn editor-font-size-minus" type="button">
+      <i class="icon-minus"></i>
+    </button>
+    <button class="btn editor-font-size-plus" type="button">
+      <i class="icon-plus"></i>
+    </button>
+  </div>
+</div>
+
+<div class="settings-controls hide form-base container-fluid" id="settings-csv" data-attr-name="gnuplot-config">
+  <div class="btn-help hide"><a class="btn-window" href="http://blog.papeeria.com/2014/12/help-plot-builder.html" target="_blank">Help</a><span class="settings-delimeter">&nbsp;|&nbsp;</span></div>
+  <div class="row-fluid">
+    <h4>Generate Plot</h4>
+    <div class="span12"><div class="container-fluid">
+      <div class="row-fluid">
+        <span class="span2 control-label"></span>
+        <span class="span3"><label><input type="radio" name="gnuplot-choice" value="managed">Use configuration below</label></span>
+        <span class="span2 control-label">
+          <label class="pull-right"><input type="radio" name="gnuplot-choice" value="raw">Use script</label>
+        </span>
+        <span class="span3">
+          <div class="plot-script-file plot-raw-ui">
+            <select class="dirs-list"></select>
+          </div>
+        </span>
+      </div>
+      <div class="row-fluid">&nbsp;</div>
+      <div class="row-fluid plot-managed-ui">
+        <span class="control-label span2" ui-label-for=".plot-data-delimiter">Data delimiter</span>
+        <span class="span3">
+          <select class="plot-data-delimiter">
+            
+            <option value="COMMA">Comma</option>
+            
+            <option value="WHITESPACE">Whitespace</option>
+            
+            <option value="SEMICOLON">Semicolon</option>
+            
+            <option value="COLON">Colon</option>
+            
+          </select>
+        </span>
+      </div>
+      <div class="row-fluid"><div class="span12"></div></div>
+
+      <div class="row-fluid plot-managed-ui">
+        <span class="control-label span2" ui-label-for=".plot-style">Style</span>
+        <span class="span3">
+          <select class="plot-style">
+            
+            <option value="LINES">Lines</option>
+            
+            <option value="POINTS">Points</option>
+            
+            <option value="LINESPOINTS">Lines and points</option>
+            
+            <option value="IMPULSES">Impulses</option>
+            
+            <option value="DOTS">Dots</option>
+            
+            <option value="STEPS">Steps</option>
+            
+            <option value="HISTOGRAMS">Histogram</option>
+            
+          </select>
+        </span>
+        <span class="span2 control-label" ui-label-for=".plot-legend">Legend</span>
+        <span class="span3">
+          <div class="container-fluid">
+            <div class="row-fluid"><span class="span12">
+              <select class="plot-legend">
+                
+                <option value="NONE">Hide</option>
+                
+                <option value="TOP_LEFT">Top Left</option>
+                
+                <option value="TOP">Top</option>
+                
+                <option value="TOP_RIGHT">Top Right</option>
+                
+                <option value="RIGHT">Right</option>
+                
+                <option value="BOTTOM_RIGHT">Bottom Right</option>
+                
+                <option value="BOTTOM">Bottom</option>
+                
+                <option value="BOTTOM_LEFT">Bottom Left</option>
+                
+                <option value="LEFT">Left</option>
+                
+              </select>
+            </span></div>
+            <div class="row-fluid"><span class="span12">
+              <label><input type="checkbox" class="plot-legend-outside"> outside of plot bounds</label>
+            </span></div>
+          </div>
+        </span>
+      </div>
+      <div class="row-fluid plot-managed-ui">
+        <h6 class="span6">X axis</h6>
+      </div>
+      <div class="row-fluid plot-managed-ui">
+        <span class="control-label span2" ui-label-for=".plot-axis-x">Name</span>
+        <span class="span3"><input type="text" class="plot-axis-x span"/></span>
+        <span class="control-label span2" ui-label-for=".plot-tick-format-x">
+          Format labels
+        </span>
+        <span class="span5">
+          <input type="text" size="10" class="span plot-tick-format-x" disabled="disabled" title='X tics are labeled with values from the first column'>
+          <label>and rotate
+            <input type="text" class="span plot-tick-rotate-x" size="3" data-toggle="tooltip" title='Integer value in [-360, 360] interval' data-trigger="manual"/>
+          </label>
+          deg.
+        </span>
+      </div>
+      <div class="row-fluid plot-managed-ui">
+        <h6 class="span6">Y axis</h6>
+      </div>
+      <div class="row-fluid plot-managed-ui">
+        <span class="control-label span2" ui-label-for=".plot-axis-y">Name</span>
+        <span class="span3"><input type="text" class="span plot-axis-y"/></span>
+        <span class="control-label span2" ui-label-for=".plot-tick-format-y">
+          Format labels
+        </span>
+        <span class="span5">
+          <input type="text" size="10" class="span plot-tick-format-y">
+          <label>and rotate
+            <input type="text" class="span plot-tick-rotate-y" size="3" data-toggle="tooltip" title='Integer value in [-360, 360] interval' data-trigger="manual">
+          </label>
+          deg.
+        </span>
+      </div>
+    </div></div>
+  </div>
+  <div class="row-fluid"><div class="span12"></div></div>
+  <div class="row-fluid">
+    <div class="span12">
+      <span class="plot-preview pull-left">
+        <label><input type="checkbox" class="plot-preview-action" id="plot-preview-action-pane"> Show plot preview</label>
+      </span>
+      <button class="btn btn-small btn-primary pull-right">Apply</button>
+      <button class="btn btn-small btn-default pull-right" id="export-script">Export script&hellip;</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div id="editorContextMenu" class="context-menu-container">
+  <div class="editor-context-menu-container context-menu-widget">
+    <button class="btn btn-link context-menu-btn" data-action="insertImageAction">Insert Image&hellip;</button>
+    <button class="btn btn-link context-menu-btn" data-action="insertChartAction">Insert Plot&hellip;</button>
+    <button class="btn btn-link context-menu-btn" data-action="insertSymbolAction">Insert Maths&hellip;</button>
+  </div>
+</div>
+<div class="img-preview-tpl hide">
+  <div class="alert alert-error hide"></div>
+  <img src=""/>
+</div>
+<div class="ui-layout-center">
+  <div id="viewer-image" class="hide"></div>
+  <div id="editor"></div>
+</div>
+<div class="discussion-pane-container">
+  <div class="discussion-pane"></div>
+</div>
+ </div>
+    <div class="east-pane-togglers pane-togglers">
+      <div class="rotator"><!--
+        --><button class="toggler pdf active">
+             <span class="icon icon-eye-open"></span>
+             <span class="toggler-label">PDF</span>
+           </button><!--
+        --><button class="toggler vcs">
+             <span class="icon icon-code-fork"></span>
+             <span class="toggler-label">Version control<span class="new-feature">&nbsp;with Git!</span></span>
+           </button><!--
+      --></div>
+    </div>
+    <div class="status-bar">
+      <div id="compilation-log-labels">
+        <span id="compile-empty" class="label">Empty log</span>
+        <span id="compile-errors" class="status-bar-elmt label label-important"></span>
+        <span id="compile-warnings" class="status-bar-elmt label label-warning"></span>
+        <a href="" target="_blank" id="compile-log-raw" class="status-bar-elmt">Open raw logs</a>
+      </div>
+      <div id="footer-links">
+        <a href="/about/pricing">Pricing</a>&nbsp;|&nbsp;
+        <a href="/about/tos">Terms of service</a>&nbsp;|&nbsp;
+        <a href="/about/contacts">Contacts</a>
+        <span id="copyright">&copy; 2016 BarD Software s.r.o</span>
+      </div>
+    </div>
+  </div>
+
+  
+    <div class="west-pane-togglers pane-togglers">
+      <div class="rotator"><!--
+        --><button class="toggler project active">
+             <span class="icon icon-folder-open"></span>
+             <span class="toggler-label">Project</span>
+           </button><!--
+      --></div>
+    </div>
+  
+  <div class="ui-layout-west" id="pane-project">
+    
+      <div class="status-bar"></div>
+    
+    <div class="pane-project-content ">
+      <div id="project-structure-splash" class="hide">
+        <i class="icon-spinner icon-spin icon-3x"></i>
+      </div>
+      
+      <ul id="project-structure" class="nav nav-list landing"></ul>
+    </div>
+    <div class="context-menu-toggle">
+      <i class="icon-chevron-right"></i>
+    </div>
+    <div id="logo">
+        <a href="/landing"><img src='/assets/2016-02-26/images/papeeria_small.png'/></a>
+    </div>
+  </div>
+</div>
+
+<div id="file-context-menu" class="context-menu-container">
+  <div class="file-context-menu-container context-menu-widget">
+    <button class="btn btn-link context-menu-btn" data-action="file-action-compile">Compile</button>
+    <button class="btn btn-link context-menu-btn" data-action="file-action-rename">Move/rename</button>
+    <button class="btn btn-link context-menu-btn" data-action="file-action-delete">Delete</button>
+  </div>
+</div>
+
+
+
+<div id="notifications" class="context-menu-container">
+  <div class="notifications-container context-menu-widget">
+    
+
+
+
+<div class="notifications-header">
+  <span class="loading"></span>
+  <button class="btn btn-link mark-all-notifications-as-read" data-action="mark-all-notifications-as-read">
+    Mark all as read
+  </button>
+  <div class="clearfix"></div>
+</div>
+
+<div class="notifications-content">
+  
+  <div class="notifications-item-template">
+    <div class="content"></div>
+    <div class="datetime"></div>
+  </div>
+  
+  <div class="notifications-item-empty">You have no unread notifications.</div>
+
+  <div class="notifications-papeeria-news">
+    <h5 class="section-header">Papeeria news</h5>
+  </div>
+
+  <div class="notifications-project-news">
+    <h5 class="section-header">Project news</h5>
+  </div>
+</div>
+
+  </div>
+</div>
+
+</div>
+<div class="tour-popover-tpl hide">
+  <div class="tour-content"></div>
+  <div class="tour-footer">
+    <span class="tour-progress">1/10</span>
+    <button class="btn tour-next">Next/Done</button>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="deleteFileConfirmModal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Delete</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Delete</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close modal-focus">No</button>
+    
+      <button type="button" class="btn modal-submit btn-danger enabled">Delete</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <span id="deleteFileConfirmModal-deleteFileText">Are you sure you want to delete file <code id="deleteFileConfirmModal-fileName">FILE_NAME</code>?</span>
+
+  <span id="deleteFileConfirmModal-deleteDirectoryText">Are you sure you want to delete directory <code id="deleteFileConfirmModal-directoryName">DIR_NAME</code> and all its contents?</span>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close modal-focus">No</button>
+    
+      <button type="button" class="btn modal-submit btn-danger enabled">Delete</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="plot-script-export-dlg">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Export Plot Script</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Export Plot Script</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Export</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+<div class="form-base container-fluid">
+
+  <div class="row-fluid">
+    <label>
+      <span class="control-label span4">File name</span>
+      <input class="new-name span8 non-empty" type="text">
+    </label>
+  </div>
+
+
+  <div class="directory-picker row-fluid">
+    <div>
+      <label class="control-label span4" for="move-modal-target-dir">Target folder</label>
+      <div class="span8">
+        <select id="move-modal-target-dir" class="dirs-list span8"></select>
+        <button class="new-subdir-toggle btn span4">New subfolder&nbsp;<span class="icon-caret-down"></span></button>
+      </div>
+    </div>
+
+    <div class="new-subdir-controls">
+      <label>
+        <span class="control-label span4">New subfolder</span>
+        <div class="span8">
+          <input class="new-subdir span8" type="text" placeholder='new subfolder name'>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <span class="span4"></span>
+    <label>
+      <span class="span8"><input class="connect" type="checkbox" checked><span class="connected-file"></span></span>
+    </label>
+  </div>
+</div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Export</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="external-storage-modal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Import from URL</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Import from URL</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Close</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Update</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+
+<div>
+  <button type="button" class="btn btn-small pull-right show-import">
+    Import new&nbsp;<span class="icon icon-caret-down"></span>
+  </button>
+  <h4 class="content-header"></h4>
+  <small class="content-subheader"></small>
+  <span class="clearfix "></span>
+</div>
+
+<div class="import-file-form">
+  <div class="url-input-row">
+    <label class="control-label span4" for="import-file-form-url-input">Import from</label>
+    <div class="span8">
+      <input id="import-file-form-url-input" class="url span12" type="text" placeholder="dropbox.com/s/3i98r9a1hmdwe4c/file.txt?dl=1">
+      <div class="pitfall-alert text-warning">We've made the url to point to the file itself. <a href="http://blog.papeeria.com/2014/12/help-import-data.html" target="_blank">Why?</a></div>
+    </div>
+    <span class="clearfix"></span>
+  </div>
+
+
+  <label>
+    <span class="control-label span4">With name</span>
+    <input class="name span8" type="text" placeholder="file.txt">
+  </label>
+
+  <div class="directory-picker"><!--TODO: extract to tags-->
+    <div>
+      <label class="control-label span4" for="import-file-from-url-target-dir">Target folder</label>
+      <div class="span8">
+        <select id="newdoc-modal-target-dir" class="dirs-list span7"></select>
+        <button class="new-subdir-toggle btn span5">New subfolder&nbsp;<span class="icon-caret-down"></span></button>
+      </div>
+    </div>
+
+    <div class="new-subdir-controls">
+      <label>
+        <span class="control-label span4">New subfolder</span>
+        <div class="span8">
+          <input class="new-subdir span7 non-submit" type="text" placeholder="new subfolder name">
+        </div>
+      </label>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <label>
+    <span class="control-label span4">Overwrite existing file</span>
+    <div class="span8">
+      <div class="span7 checkbox-container">
+        <input class="overwrite" type="checkbox">
+      </div>
+      <button type="button" class="btn btn-primary pull-right do-import">Import</button>
+    </div>
+    <div class="clearfix"></div>
+  </label>
+  <p class="error text-error hide"></p>
+</div>
+
+<div class="state-loaded sync-items-list">
+  <div class="header"><!--
+  --><input type="checkbox" class="check-all"><!--
+  --><span class="filename">File</span><!--
+  --><span class="last-update">Last update</span>
+  </div>
+
+  <label class="sync-item-tpl"><!--
+  --><input type="checkbox" class="is-selected"><!--
+  --><span class="filename"></span><!--
+  --><span class="last-update"></span><!--
+  --><a href="" class="url" target="_blank"></a><!--
+  --><div class="error hide"></div>
+  </label>
+</div>
+
+<p class="state-loading">Loading linked files list&hellip;</p>
+<p class="state-loading-failed">
+  Failed to load linked files list.
+  <a href="javascript:void(0)" class="retry">Try again</a>
+</p>
+<p class="state-no-linked-files no-linked-files-message">You don&#x27;t have any files imported from the Internet</p>
+
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Close</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Update</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+<form class="fileUploadForm hide" id="insertImageModal-form" enctype="multipart/form-data" method="post">
+  
+
+<div class="modal modal-base hide" id="insertImageModal">
+  <div class="modal-header desktop-only">
+  <button type="button" class="close modal-close">&times;</button>
+  <div>
+    <h3 class="modal-title">Insert image into document</h3>
+    <span class="modal-subtitle form-help-text"></span>
+  </div>
+</div>
+  <div class="modal-header mobile-only">
+  <h3 class="modal-title">Insert image into document</h3>
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close">Cancel</button>
+    <button type="submit" class="btn btn-primary modal-submit basic-file-upload">Upload</button>
+    <button type="button" class="btn btn-primary modal-submit-async async-file-upload">Upload</button>
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <div class="directory-picker control-group row-fluid">
+    <div>
+      <label class="control-label span3" for="upload-modal-target-dir">Upload to</label>
+      <div class="right-column">
+        <select id="upload-modal-target-dir" class="dirs-list span8"></select>
+        <button class="new-subdir-toggle btn span4" type="button">
+          New subfolder&nbsp;<span class="icon-caret-down"></span>
+        </button>
+      </div>
+    </div>
+
+    <label class="new-subdir-controls">
+      <span class="control-label span3">New subfolder</span>
+      <div class="right-column">
+        <input class="new-subdir span8" type="text" placeholder="new subfolder name">
+      </div>
+    </label>
+  </div>
+
+  <div class="fileupload fileupload-new basic-file-upload row-fluid" data-provides="fileupload">
+    <label>
+      <span class="control-label span3">File</span>
+      <div class="span8 input-append">
+        <div class="uneditable-input">
+          <i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span>
+        </div>
+        <span class="btn btn-file">
+          <span class="fileupload-new">Select file</span>
+          <span class="fileupload-exists">Change</span>
+          <input class="fileupload-input" type="file" name="file"/>
+          
+          <input class="fileupload-path" type="hidden" name="path"/>
+          
+          <input class="fileupload-opened" type="hidden" name="openedFile"/>
+        </span>
+        <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+      </div>
+    </label>
+  </div>
+
+  
+
+  <div class="async-files-list control-group row-fluid">
+    <span class="control-label span3">Files</span>
+    <div class="table-container right-column">
+      <table class="table table-hover">
+        <tr class="hidden-row">
+          <td class="name"></td>
+          <td><span class="status"></span></td>
+          <td><button type="button" class="close remove-file">&times;</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="async-modal-control control-group async-file-upload row-fluid">
+    <span class="control-label span3 empty-control">&nbsp;</span>
+    <div class="span8 right-column">
+      <span class="btn btn-file">
+        <span class="async-add-files-btn">Choose files&amp;hellip;</span>
+        <input class="async-fileupload-input" type="file" name="files[]" multiple />
+      </span>
+    </div>
+  </div>
+
+  
+  <label class="overwrite-files row-fluid">
+    <span class="span3 empty-control">&nbsp;</span>
+    <span class="span8">
+      <input class="overwrite-files-control" type="checkbox" name="overwriteFiles">
+      Overwrite existing files
+    </span>
+  </label>
+
+  
+
+  
+  <label class="row-fluid insert-image">
+    <span class="span3">&nbsp;</span>
+    <span class="span8">
+      <input class="insert-image-checkbox" type="checkbox" name="insertAsImage" checked>
+      Insert image into document
+    </span>
+  </label>
+
+  
+  <label class="row-fluid insert-image-options">
+    <span class="control-label span3">Caption</span>
+    <div class="right-column">
+      <input class="span8 insert-image-caption" type="text" placeholder="Caption&hellip;">
+    </div>
+  </label>
+
+
+
+  <p class="text-warning hide modal-warning"></p>
+  <p class="text-error hide modal-error"></p>
+
+  <div class="mobile-footer mobile-only">
+    <span class="basic-file-upload footer-tip">
+    Uploading multiple files? Try <button class="btn btn-link toggle-uploader" type="button">enhanced uploader</button>.
+    </span>
+    <span class="async-file-upload footer-tip">
+    Having problems? Try <button class="btn btn-link toggle-uploader" type="button">basic uploader</button>.
+    </span>
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  <span class="basic-file-upload footer-tip pull-left">
+    Uploading multiple files? Try <button class="btn btn-link toggle-uploader" type="button">enhanced uploader</button>.
+  </span>
+  <span class="async-file-upload footer-tip pull-left">
+    Having problems? Try <button class="btn btn-link toggle-uploader" type="button">basic uploader</button>.
+  </span>
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close">Cancel</button>
+    <button type="submit" class="btn btn-primary modal-submit basic-file-upload">Upload</button>
+    <button type="button" class="btn btn-primary modal-submit-async async-file-upload">Upload</button>
+  </div>
+
+</div>
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="insert-chart-modal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Insert Plot</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Insert Plot</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Done</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  
+  <label>
+    <span class="control-label span3">File name</span>
+    <input class="insert-chart-filename span8 non-empty modal-focus" name="filename" type="text" placeholder="plot">
+    <input class="insert-chart-filename-template" type="hidden" value="plot">
+  </label>
+
+  <div class="row-fluid result-file-container">
+    <span class="span3"></span>
+    <strong>Result file:</strong> <span class="insert-chart-result-filename"></span>
+  </div>
+
+  <div class="control-label span3">
+    <label for="insert-chart-text">Plot data</label>
+    <div class="help-text">
+    The first line contains column titles.<br>   The first column is X axis values, all other columns are Y axis values.
+    </div>
+    <pre class="code-snippet"># Example
+  X, X^2, X^3
+  1,   1,   1
+  2,   4,   8
+  3,   9,  27</pre>
+  </div>
+  <textarea class="insert-chart-textarea span8 non-empty" id="insert-chart-text" name="text" rows="11" placeholder="Paste plot data here. 
+  
+## Comment lines start with hash. 
+## Data columns can be separated with comma (default),
+## whitespace, colon or semicolon. 
+## Choose data separator below."></textarea>
+
+  <label>
+    <span class="control-label span3">Data separator</span>
+    <span class="span8">
+      <select class="insert-chart-delimiter">
+      
+        <option value="COMMA">Comma</option>
+      
+        <option value="WHITESPACE">Whitespace</option>
+      
+        <option value="SEMICOLON">Semicolon</option>
+      
+        <option value="COLON">Colon</option>
+      
+      </select>
+    </span>
+  </label>
+
+  <label>
+    <span class="control-label span3">Caption</span>
+    <input class="insert-chart-caption span8" name="caption" type="text" placeholder="Caption&hellip;">
+  </label>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Done</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base modal-tabbed hide" id="insertSymbolModal">
+  <div class="modal-header desktop-only">
+  <button type="button" class="close modal-close">&times;</button>
+  <h3 class="modal-title">Insert Maths</h3>
+  
+</div>
+  <div class="modal-header mobile-only">
+  <h3 class="modal-title">Insert Maths</h3>
+  
+  <div class="modal-controls">
+    <button type="button" class="btn btn-mini modal-close">Cancel</button>
+    <button type="button" class="btn btn-mini modal-submit btn-primary">Insert selected</button>
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  
+    
+    <ul class="nav nav-vertical span4">
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsGreek">Greek Letters</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsBinary">Binary Operations</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsRelation">Relations</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsPunctuation">Punctuation</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsArrow">Arrows</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsMiscellanious">Miscellaneous</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsVariable">Sum, integral&hellip;</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsLogLike">Log, lim, arctan&hellip;</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsDelimeters">Delimeters</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="symbolsMathMode">Math mode accents</a></li>
+      
+    </ul>
+  
+  <div class="span8">
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsGreek">
+      Greek Letters
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsGreek">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-alpha"></i><code>\alpha</code></div>
+    <div class="symbol"><i class="s-beta"></i><code>\beta</code></div>
+    <div class="symbol"><i class="s-gamma"></i><code>\gamma</code></div>
+    <div class="symbol"><i class="s-delta"></i><code>\delta</code></div>
+    <div class="symbol"><i class="s-epsilon"></i><code>\epsilon</code></div>
+    <div class="symbol"><i class="s-varepsilon"></i><code>\varepsilon</code></div>
+    <div class="symbol"><i class="s-zeta"></i><code>\zeta</code></div>
+    <div class="symbol"><i class="s-eta"></i><code>\eta</code></div>
+    <div class="symbol"><i class="s-theta"></i><code>\theta</code></div>
+    <div class="symbol"><i class="s-vartheta"></i><code>\vartheta</code></div>
+    <div class="symbol"><i class="s-kappa"></i><code>\kappa</code></div>
+    <div class="symbol"><i class="s-lambda"></i><code>\lambda</code></div>
+    <div class="symbol"><i class="s-mu"></i><code>\mu</code></div>
+    <div class="symbol"><i class="s-nu"></i><code>\nu</code></div>
+    <div class="symbol"><i class="s-xi"></i><code>\xi</code></div>
+    <div class="symbol"><i class="s-o"></i><code>o</code></div>
+    <div class="symbol"><i class="s-pi"></i><code>\pi</code></div>
+    <div class="symbol"><i class="s-varpi"></i><code>\varpi</code></div>
+    <div class="symbol"><i class="s-rho"></i><code>\rho</code></div>
+    <div class="symbol"><i class="s-varrho"></i><code>\varrho</code></div>
+    <div class="symbol"><i class="s-sigma"></i><code>\sigma</code></div>
+    <div class="symbol"><i class="s-varsigma"></i><code>\varsigma</code></div>
+    <div class="symbol"><i class="s-tau"></i><code>\tau</code></div>
+    <div class="symbol"><i class="s-upsilon"></i><code>&#92;upsilon</code></div>
+    <div class="symbol"><i class="s-phi"></i><code>\phi</code></div>
+    <div class="symbol"><i class="s-varphi"></i><code>\varphi</code></div>
+    <div class="symbol"><i class="s-chi"></i><code>\chi</code></div>
+    <div class="symbol"><i class="s-psi"></i><code>\psi</code></div>
+    <div class="symbol"><i class="s-omega"></i><code>\omega</code></div>
+    <div class="symbol"><i class="s-_Gamma"></i><code>\Gamma</code></div>
+    <div class="symbol"><i class="s-_Delta"></i><code>\Delta</code></div>
+    <div class="symbol"><i class="s-_Theta"></i><code>\Theta</code></div>
+    <div class="symbol"><i class="s-_Lambda"></i><code>\Lambda</code></div>
+    <div class="symbol"><i class="s-_Xi"></i><code>\Xi</code></div>
+    <div class="symbol"><i class="s-_Pi"></i><code>\Pi</code></div>
+    <div class="symbol"><i class="s-_Sigma"></i><code>\Sigma</code></div>
+    <div class="symbol"><i class="s-_Upsilon"></i><code>\Upsilon</code></div>
+    <div class="symbol"><i class="s-_Phi"></i><code>\Phi</code></div>
+    <div class="symbol"><i class="s-_Psi"></i><code>\Psi</code></div>
+    <div class="symbol"><i class="s-_Omega"></i><code>\Omega</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsBinary">
+      Binary Operations
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsBinary">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-pm"></i><code>\pm</code></div>
+    <div class="symbol"><i class="s-cap"></i><code>\cap</code></div>
+    <div class="symbol"><i class="s-diamond"></i><code>\diamond</code></div>
+    <div class="symbol"><i class="s-oplus"></i><code>\oplus</code></div>
+    <div class="symbol"><i class="s-mp"></i><code>\mp</code></div>
+    <div class="symbol"><i class="s-cup"></i><code>\cup</code></div>
+    <div class="symbol"><i class="s-bigtriangleup"></i><code>\bigtriangleup</code></div>
+    <div class="symbol"><i class="s-ominus"></i><code>\ominus</code></div>
+    <div class="symbol"><i class="s-times"></i><code>\times</code></div>
+    <div class="symbol"><i class="s-uplus"></i><code>&#92;uplus</code></div>
+    <div class="symbol"><i class="s-bigtriangledown"></i><code>\bigtriangledown</code></div>
+    <div class="symbol"><i class="s-otimes"></i><code>\otimes</code></div>
+    <div class="symbol"><i class="s-div"></i><code>\div</code></div>
+    <div class="symbol"><i class="s-sqcap"></i><code>\sqcap</code></div>
+    <div class="symbol"><i class="s-triangleleft"></i><code>\triangleleft</code></div>
+    <div class="symbol"><i class="s-oslash"></i><code>\oslash</code></div>
+    <div class="symbol"><i class="s-ast"></i><code>\ast</code></div>
+    <div class="symbol"><i class="s-sqcup"></i><code>\sqcup</code></div>
+    <div class="symbol"><i class="s-triangleright"></i><code>\triangleright</code></div>
+    <div class="symbol"><i class="s-odot"></i><code>\odot</code></div>
+    <div class="symbol"><i class="s-star"></i><code>\star</code></div>
+    <div class="symbol"><i class="s-vee"></i><code>\vee</code></div>
+    <div class="symbol"><i class="s-lhd"></i><code>\lhd</code></div>
+    <div class="symbol"><i class="s-bigcirc"></i><code>\bigcirc</code></div>
+    <div class="symbol"><i class="s-circ"></i><code>\circ</code></div>
+    <div class="symbol"><i class="s-wedge"></i><code>\wedge</code></div>
+    <div class="symbol"><i class="s-rhd"></i><code>\rhd</code></div>
+    <div class="symbol"><i class="s-dagger"></i><code>\dagger</code></div>
+    <div class="symbol"><i class="s-bullet"></i><code>\bullet</code></div>
+    <div class="symbol"><i class="s-setminus"></i><code>\setminus</code></div>
+    <div class="symbol"><i class="s-unlhd"></i><code>&#92;unlhd</code></div>
+    <div class="symbol"><i class="s-ddagger"></i><code>\ddagger</code></div>
+    <div class="symbol"><i class="s-cdot"></i><code>\cdot</code></div>
+    <div class="symbol"><i class="s-wr"></i><code>\wr</code></div>
+    <div class="symbol"><i class="s-unrhd"></i><code>&#92;unrhd</code></div>
+    <div class="symbol"><i class="s-amalg"></i><code>\amalg</code></div>
+    <div class="symbol"><i class="s-plus"></i><code>+</code></div>
+    <div class="symbol"><i class="s-minus"></i><code>-</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsRelation">
+      Relations
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsRelation">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-leq"></i><code>\leq</code></div>
+    <div class="symbol"><i class="s-geq"></i><code>\geq</code></div>
+    <div class="symbol"><i class="s-equiv"></i><code>\equiv</code></div>
+    <div class="symbol"><i class="s-models"></i><code>\models</code></div>
+    <div class="symbol"><i class="s-prec"></i><code>\prec</code></div>
+    <div class="symbol"><i class="s-succ"></i><code>\succ</code></div>
+    <div class="symbol"><i class="s-sim"></i><code>\sim</code></div>
+    <div class="symbol"><i class="s-perp"></i><code>\perp</code></div>
+    <div class="symbol"><i class="s-preceq"></i><code>\preceq</code></div>
+    <div class="symbol"><i class="s-succeq"></i><code>\succeq</code></div>
+    <div class="symbol"><i class="s-simeq"></i><code>\simeq</code></div>
+    <div class="symbol"><i class="s-mid"></i><code>\mid</code></div>
+    <div class="symbol"><i class="s-ll"></i><code>\ll</code></div>
+    <div class="symbol"><i class="s-gg"></i><code>\gg</code></div>
+    <div class="symbol"><i class="s-asymp"></i><code>\asymp</code></div>
+    <div class="symbol"><i class="s-parallel"></i><code>\parallel</code></div>
+    <div class="symbol"><i class="s-subset"></i><code>\subset</code></div>
+    <div class="symbol"><i class="s-supset"></i><code>\supset</code></div>
+    <div class="symbol"><i class="s-approx"></i><code>\approx</code></div>
+    <div class="symbol"><i class="s-bowtie"></i><code>\bowtie</code></div>
+    <div class="symbol"><i class="s-subseteq"></i><code>\subseteq</code></div>
+    <div class="symbol"><i class="s-supseteq"></i><code>\supseteq</code></div>
+    <div class="symbol"><i class="s-cong"></i><code>\cong</code></div>
+    <div class="symbol"><i class="s-Join"></i><code>\Join</code></div>
+    <div class="symbol"><i class="s-sqsubset"></i><code>\sqsubset</code></div>
+    <div class="symbol"><i class="s-sqsupset"></i><code>\sqsupset</code></div>
+    <div class="symbol"><i class="s-neq"></i><code>\neq</code></div>
+    <div class="symbol"><i class="s-smile"></i><code>\smile</code></div>
+    <div class="symbol"><i class="s-sqsubseteq"></i><code>\sqsubseteq</code></div>
+    <div class="symbol"><i class="s-sqsupseteq"></i><code>\sqsupseteq</code></div>
+    <div class="symbol"><i class="s-doteq"></i><code>\doteq</code></div>
+    <div class="symbol"><i class="s-frown"></i><code>\frown</code></div>
+    <div class="symbol"><i class="s-in"></i><code>\in</code></div>
+    <div class="symbol"><i class="s-ni"></i><code>\ni</code></div>
+    <div class="symbol"><i class="s-propto"></i><code>\propto</code></div>
+    <div class="symbol"><i class="s-equals"></i><code>=</code></div>
+    <div class="symbol"><i class="s-vdash"></i><code>\vdash</code></div>
+    <div class="symbol"><i class="s-dashv"></i><code>\dashv</code></div>
+    <div class="symbol"><i class="s-lt"></i><code>&lt;</code></div>
+    <div class="symbol"><i class="s-gt"></i><code>&gt;</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsPunctuation">
+      Punctuation
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsPunctuation">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-comma"></i><code>,</code></div>
+    <div class="symbol"><i class="s-semicolon"></i><code>;</code></div>
+    <div class="symbol"><i class="s-colon"></i><code>\colon</code></div>
+    <div class="symbol"><i class="s-ldotp"></i><code>\ldotp</code></div>
+    <div class="symbol"><i class="s-cdotp"></i><code>\cdotp</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsArrow">
+      Arrows
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsArrow">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-leftarrow"></i><code>\leftarrow</code></div>
+    <div class="symbol"><i class="s-longleftarrow"></i><code>\longleftarrow</code></div>
+    <div class="symbol"><i class="s-uparrow"></i><code>&#92;uparrow</code></div>
+    <div class="symbol"><i class="s-_Leftarrow"></i><code>\Leftarrow</code></div>
+    <div class="symbol"><i class="s-_Longleftarrow"></i><code>\Longleftarrow</code></div>
+    <div class="symbol"><i class="s-_Uparrow"></i><code>\Uparrow</code></div>
+    <div class="symbol"><i class="s-rightarrow"></i><code>\rightarrow</code></div>
+    <div class="symbol"><i class="s-longrightarrow"></i><code>\longrightarrow</code></div>
+    <div class="symbol"><i class="s-downarrow"></i><code>\downarrow</code></div>
+    <div class="symbol"><i class="s-_Rightarrow"></i><code>\Rightarrow</code></div>
+    <div class="symbol"><i class="s-_Longrightarrow"></i><code>\Longrightarrow</code></div>
+    <div class="symbol"><i class="s-_Downarrow"></i><code>\Downarrow</code></div>
+    <div class="symbol"><i class="s-leftrightarrow"></i><code>\leftrightarrow</code></div>
+    <div class="symbol"><i class="s-longleftrightarrow"></i><code>\longleftrightarrow</code></div>
+    <div class="symbol"><i class="s-updownarrow"></i><code>&#92;updownarrow</code></div>
+    <div class="symbol"><i class="s-_Leftrightarrow"></i><code>\Leftrightarrow</code></div>
+    <div class="symbol"><i class="s-_Longleftrightarrow"></i><code>\Longleftrightarrow</code></div>
+    <div class="symbol"><i class="s-_Updownarrow"></i><code>\Updownarrow</code></div>
+    <div class="symbol"><i class="s-mapsto"></i><code>\mapsto</code></div>
+    <div class="symbol"><i class="s-longmapsto"></i><code>\longmapsto</code></div>
+    <div class="symbol"><i class="s-nearrow"></i><code>\nearrow</code></div>
+    <div class="symbol"><i class="s-hookleftarrow"></i><code>\hookleftarrow</code></div>
+    <div class="symbol"><i class="s-hookrightarrow"></i><code>\hookrightarrow</code></div>
+    <div class="symbol"><i class="s-searrow"></i><code>\searrow</code></div>
+    <div class="symbol"><i class="s-leftharpoonup"></i><code>\leftharpoonup</code></div>
+    <div class="symbol"><i class="s-rightharpoonup"></i><code>\rightharpoonup</code></div>
+    <div class="symbol"><i class="s-swarrow"></i><code>\swarrow</code></div>
+    <div class="symbol"><i class="s-leftharpoondown"></i><code>\leftharpoondown</code></div>
+    <div class="symbol"><i class="s-rightharpoondown"></i><code>\rightharpoondown</code></div>
+    <div class="symbol"><i class="s-nwarrow"></i><code>\nwarrow</code></div>
+    <div class="symbol"><i class="s-rightleftharpoons"></i><code>\rightleftharpoons</code></div>
+    <div class="symbol"><i class="s-leadsto"></i><code>\leadsto</code></div>
+    </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsMiscellanious">
+      Miscellaneous
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsMiscellanious">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-ldots"></i><code>\ldots</code></div>
+    <div class="symbol"><i class="s-cdots"></i><code>\cdots</code></div>
+    <div class="symbol"><i class="s-vdots"></i><code>\vdots</code></div>
+    <div class="symbol"><i class="s-ddots"></i><code>\ddots</code></div>
+    <div class="symbol"><i class="s-aleph"></i><code>\aleph</code></div>
+    <div class="symbol"><i class="s-prime"></i><code>\prime</code></div>
+    <div class="symbol"><i class="s-forall"></i><code>\forall</code></div>
+    <div class="symbol"><i class="s-infty"></i><code>\infty</code></div>
+    <div class="symbol"><i class="s-hbar"></i><code>\hbar</code></div>
+    <div class="symbol"><i class="s-emptyset"></i><code>\emptyset</code></div>
+    <div class="symbol"><i class="s-exists"></i><code>\exists</code></div>
+    <div class="symbol"><i class="s-Box"></i><code>\Box</code></div>
+    <div class="symbol"><i class="s-imath"></i><code>\imath</code></div>
+    <div class="symbol"><i class="s-nabla"></i><code>\nabla</code></div>
+    <div class="symbol"><i class="s-neg"></i><code>\neg</code></div>
+    <div class="symbol"><i class="s-jmath"></i><code>\jmath</code></div>
+    <div class="symbol"><i class="s-surd"></i><code>\surd</code></div>
+    <div class="symbol"><i class="s-flat"></i><code>\flat</code></div>
+    <div class="symbol"><i class="s-triangle"></i><code>\triangle</code></div>
+    <div class="symbol"><i class="s-ell"></i><code>\ell</code></div>
+    <div class="symbol"><i class="s-top"></i><code>\top</code></div>
+    <div class="symbol"><i class="s-natural"></i><code>\natural</code></div>
+    <div class="symbol"><i class="s-clubsuit"></i><code>\clubsuit</code></div>
+    <div class="symbol"><i class="s-wp"></i><code>\wp</code></div>
+    <div class="symbol"><i class="s-bot"></i><code>\bot</code></div>
+    <div class="symbol"><i class="s-sharp"></i><code>\sharp</code></div>
+    <div class="symbol"><i class="s-Re"></i><code>\Re</code></div>
+    <div class="symbol"><i class="s-verticalLine"></i><code>\|</code></div>
+    <div class="symbol"><i class="s-backslash"></i><code>\backslash</code></div>
+    <div class="symbol"><i class="s-heartsuit"></i><code>\heartsuit</code></div>
+    <div class="symbol"><i class="s-Im"></i><code>\Im</code></div>
+    <div class="symbol"><i class="s-angle"></i><code>\angle</code></div>
+    <div class="symbol"><i class="s-partial"></i><code>\partial</code></div>
+    <div class="symbol"><i class="s-spadesuit"></i><code>\spadesuit</code></div>
+    <div class="symbol"><i class="s-mho"></i><code>\mho</code></div>
+    <div class="symbol"><i class="s-dot"></i><code>.</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsVariable">
+      Sum, integral&hellip;
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsVariable">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-sum"></i><code>\sum</code></div>
+    <div class="symbol"><i class="s-bigcap"></i><code>\bigcap</code></div>
+    <div class="symbol"><i class="s-bigodot"></i><code>\bigodot</code></div>
+    <div class="symbol"><i class="s-prod"></i><code>\prod</code></div>
+    <div class="symbol"><i class="s-bigcup"></i><code>\bigcup</code></div>
+    <div class="symbol"><i class="s-bigotimes"></i><code>\bigotimes</code></div>
+    <div class="symbol"><i class="s-coprod"></i><code>\coprod</code></div>
+    <div class="symbol"><i class="s-bigsqcup"></i><code>\bigsqcup</code></div>
+    <div class="symbol"><i class="s-bigoplus"></i><code>\bigoplus</code></div>
+    <div class="symbol"><i class="s-int"></i><code>\int</code></div>
+    <div class="symbol"><i class="s-bigvee"></i><code>\bigvee</code></div>
+    <div class="symbol"><i class="s-biguplus"></i><code>\biguplus</code></div>
+    <div class="symbol"><i class="s-oint"></i><code>\oint</code></div>
+    <div class="symbol"><i class="s-bigwedge"></i><code>\bigwedge</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsLogLike">
+      Log, lim, arctan&hellip;
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsLogLike">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-arccos"></i><code>\arccos</code></div>
+    <div class="symbol"><i class="s-cos"></i><code>\cos</code></div>
+    <div class="symbol"><i class="s-csc"></i><code>\csc</code></div>
+    <div class="symbol"><i class="s-exp"></i><code>\exp</code></div>
+    <div class="symbol"><i class="s-ker"></i><code>\ker</code></div>
+    <div class="symbol"><i class="s-limsup"></i><code>\limsup</code></div>
+    <div class="symbol"><i class="s-min"></i><code>\min</code></div>
+    <div class="symbol"><i class="s-sinh"></i><code>\sinh</code></div>
+    <div class="symbol"><i class="s-arcsin"></i><code>\arcsin</code></div>
+    <div class="symbol"><i class="s-cosh"></i><code>\cosh</code></div>
+    <div class="symbol"><i class="s-deg"></i><code>\deg</code></div>
+    <div class="symbol"><i class="s-gcd"></i><code>\gcd</code></div>
+    <div class="symbol"><i class="s-lg"></i><code>\lg</code></div>
+    <div class="symbol"><i class="s-ln"></i><code>\ln</code></div>
+    <div class="symbol"><i class="s-Pr"></i><code>\Pr</code></div>
+    <div class="symbol"><i class="s-sup"></i><code>\sup</code></div>
+    <div class="symbol"><i class="s-arctan"></i><code>\arctan</code></div>
+    <div class="symbol"><i class="s-cot"></i><code>\cot</code></div>
+    <div class="symbol"><i class="s-det"></i><code>\det</code></div>
+    <div class="symbol"><i class="s-hom"></i><code>\hom</code></div>
+    <div class="symbol"><i class="s-lim"></i><code>\lim</code></div>
+    <div class="symbol"><i class="s-log"></i><code>\log</code></div>
+    <div class="symbol"><i class="s-sec"></i><code>\sec</code></div>
+    <div class="symbol"><i class="s-tan"></i><code>\tan</code></div>
+    <div class="symbol"><i class="s-arg"></i><code>\arg</code></div>
+    <div class="symbol"><i class="s-coth"></i><code>\coth</code></div>
+    <div class="symbol"><i class="s-dim"></i><code>\dim</code></div>
+    <div class="symbol"><i class="s-inf"></i><code>\inf</code></div>
+    <div class="symbol"><i class="s-liminf"></i><code>\liminf</code></div>
+    <div class="symbol"><i class="s-max"></i><code>\max</code></div>
+    <div class="symbol"><i class="s-sin"></i><code>\sin</code></div>
+    <div class="symbol"><i class="s-tanh"></i><code>\tanh</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsDelimeters">
+      Delimeters
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsDelimeters">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-lparen"></i><code>(</code></div>
+    <div class="symbol"><i class="s-rparen"></i><code>)</code></div>
+    <div class="symbol"><i class="s-lbracket"></i><code>[</code></div>
+    <div class="symbol"><i class="s-rbracket"></i><code>]</code></div>
+    <div class="symbol"><i class="s-lcurlybracket"></i><code>\{</code></div>
+    <div class="symbol"><i class="s-rcurlybracket"></i><code>\}</code></div>
+    <div class="symbol"><i class="s-lfloor"></i><code>\lfloor</code></div>
+    <div class="symbol"><i class="s-rfloor"></i><code>\rfloor</code></div>
+    <div class="symbol"><i class="s-lceil"></i><code>\lceil</code></div>
+    <div class="symbol"><i class="s-rceil"></i><code>\rceil</code></div>
+    <div class="symbol"><i class="s-langle"></i><code>\langle</code></div>
+    <div class="symbol"><i class="s-rangle"></i><code>\rangle</code></div>
+    <div class="symbol"><i class="s-trueslash"></i><code>/</code></div>
+    <div class="symbol"><i class="s-backslash"></i><code>\backslash</code></div>
+  </div>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="symbolsMathMode">
+      Math mode accents
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="symbolsMathMode">
+  <div class="character-symbols">
+    <div class="symbol"><i class="s-hat"></i><code>\hat{a}</code></div>
+    <div class="symbol"><i class="s-acute"></i><code>\acute{a}</code></div>
+    <div class="symbol"><i class="s-bar"></i><code>\bar{a}</code></div>
+    <div class="symbol"><i class="s-_dot"></i><code>\dot{a}</code></div>
+    <div class="symbol"><i class="s-breve"></i><code>\breve{a}</code></div>
+    <div class="symbol"><i class="s-check"></i><code>\check{a}</code></div>
+    <div class="symbol"><i class="s-grave"></i><code>\grave{a}</code></div>
+    <div class="symbol"><i class="s-vec"></i><code>\vec{a}</code></div>
+    <div class="symbol"><i class="s-ddot"></i><code>\ddot{a}</code></div>
+    <div class="symbol"><i class="s-tilde"></i><code>\tilde{a}</code></div>
+  </div>
+</div>
+  
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn  modal-close">Cancel</button>
+    <button type="button" class="btn  modal-submit btn-primary">Insert selected</button>
+  </div>
+
+  <p class="hide modal-info pull-left"></p>
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="moveFileModal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Move/rename</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Move/rename</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close modal-focus">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Move</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <div class="directory-picker">
+    <div>
+      <label class="control-label span4" for="move-modal-target-dir">Move to</label>
+      <div class="span8">
+        <select id="move-modal-target-dir" class="dirs-list span8"></select>
+        <button class="new-subdir-toggle btn span4">New subfolder&nbsp;<span class="icon-caret-down"></span></button>
+      </div>
+    </div>
+
+    <div class="new-subdir-controls">
+      <label>
+        <span class="control-label span4">New subfolder name</span>
+        <div class="span8">
+          <input class="new-subdir span8" type="text" placeholder="New subfolder">
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <label>
+    <span class="control-label span4">With name</span>
+    <input class="new-name span8 non-empty" type="text" placeholder="New name">
+  </label>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close modal-focus">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Move</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="addFileModal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">New Document</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">New Document</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Create</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <div class="templates-container">
+    <div class="left-column row-fluid"> <!-- left column -->
+      <label> <!-- base file name -->
+        <span class="control-label span4">File name</span>
+        <input class="file-name span8 non-empty" type="text" placeholder="name">
+      </label>
+
+      <div class="directory-picker">
+        <div> <!-- target folder -->
+          <label class="control-label span4" for="newdoc-modal-target-dir">Target folder</label>
+          <div class="span8">
+            <select id="newdoc-modal-target-dir" class="dirs-list span7"></select>
+            <button class="new-subdir-toggle btn span5">New subfolder&nbsp;<span class="icon-caret-down"></span></button>
+          </div>
+        </div>
+
+        <div class="new-subdir-controls"> <!-- new subfolder -->
+          <label>
+            <span class="control-label span4">New subfolder</span>
+            <div class="span8">
+              <input class="new-subdir span7" type="text" placeholder="new subfolder name">
+            </div>
+          </label>
+        </div>
+      </div>
+      
+      <!-- templates stuff -->
+      <h4 class="apply-tpl-header">Apply template</h4>
+      <!-- tags input -->
+      <div class="search-box span12">
+        <i class="icon-search"></i>
+        <input class="tags-filter" type="text" placeholder="filter by tags or name">
+      </div>
+
+      <div class="templates-list span12"> <!-- templates list -->
+        <div class="template-item-tpl hide">
+          <div class="template-name"></div>
+          <div class="template-tags">
+            <span class="template-tag"></span>
+          </div>
+        </div>
+
+        <div class="list-header owned-templates-header hide">
+          Yours
+        </div>
+        <div class="list-header public-templates-header hide">
+          Public 
+          <span class="ordering-remark">sorted by popularity</span>
+        </div>
+        <div class="loading-item hide">
+          <i class="icon-spin icon-spinner"></i>&nbsp;Loading templates&hellip;
+        </div>
+        <div class="load-more-item hide">
+          Load more
+        </div>
+        <div class="no-templates-item hide">
+          No templates found
+        </div>
+      </div>
+    </div> <!-- end of left column -->
+    
+    
+    <div class="right-column row-fluid"> <!-- right column -->
+      <h4 class="result-files-header">Result files</h4>
+      <a href="javascript:void(0)" class="result-files-toggle result-files-show">show <span class="hidden-files-count"></span> more</a>
+      <a href="javascript:void(0)" class="result-files-toggle result-files-hide">show less</a><br>
+      
+      <ul class="result-files"> <!-- result files list -->
+      </ul> 
+      
+      <a class="template-url" href="" target="_blank"> <!-- preview -->
+        <div class="preview img-polaroid">
+            <img class="template-thumbnail" title="Click to open this template in new window">
+            <span class="muted no-thumbnail">No preview available</span>
+        </div> 
+      </a> <!-- end of right column -->
+    </div> <!-- end of modal fluid body -->
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Create</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="addDirectoryModal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">New Folder</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">New Folder</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Create</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+         
+  <div class="directory-picker">
+    <label>
+      <span class="control-label span4">Name</span>
+      <input class="new-subdir span6 non-empty modal-focus" type="text" placeholder="New folder name">
+    </label>
+    
+    <label>
+      <span class="control-label span4">Create in</span>
+      <select class="dirs-list span6"></select>
+    </label>
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Create</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="shareProjectModal">
+  <div class="modal-header desktop-only">
+  
+    
+  <div class="project-state-container pull-right">
+    <div class="dropdown btn-group">
+      <button id="project-state" class="btn btn-small dropdown-toggle" data-toggle="dropdown" disabled="disabled">
+        <span id="project-state-name">State</span>&nbsp;<span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="state-choice" id="set-public" href="javascript:void(0)">Public</a></li>
+        <li><a class="state-choice" id="set-private" href="javascript:void(0)">Private</a></li>
+        <li><a class="state-choice" id="set-archived" href="javascript:void(0)">Archived</a></li>
+      </ul>
+    </div>
+    &nbsp;
+    <button type="button" class="close modal-close">&times;</button>
+  </div>
+  <h3 class="modal-title">Sharing Settings</h3>
+
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    
+  <div class="project-state-container pull-right">
+    <div class="dropdown btn-group">
+      <button id="project-state" class="btn btn-small dropdown-toggle" data-toggle="dropdown" disabled="disabled">
+        <span id="project-state-name">State</span>&nbsp;<span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="state-choice" id="set-public" href="javascript:void(0)">Public</a></li>
+        <li><a class="state-choice" id="set-private" href="javascript:void(0)">Private</a></li>
+        <li><a class="state-choice" id="set-archived" href="javascript:void(0)">Archived</a></li>
+      </ul>
+    </div>
+    &nbsp;
+    <button type="button" class="close modal-close">&times;</button>
+  </div>
+  <h3 class="modal-title">Sharing Settings</h3>
+
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Done</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <div class="row-fluid">
+    <div class="span8">
+      <h5>Link Sharing</h5>
+    </div>
+    <div class="btn-toolbar pull-right">
+      <div class="btn-group" data-toggle="buttons-radio">
+        <button type="button" class="btn btn-mini share-link-on">On</button>
+        <button type="button" class="btn btn-mini share-link-off">Off</button>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="help-text span12">
+      Any registered user who clicks the link will gain the specified permissions.  Switching link sharing to off will make previously shared links invalid.
+    </div>
+  </div>
+  <div class="share-section share-impersonal">
+      <table class="table table-hover">
+        <tr>
+          <td>Read</td>
+          <td class="share-link share-link-read">
+          
+
+
+<div class="copy-container hide" title="Click to copy">
+  <i class="icon icon-copy"></i>
+  <span class="copy-label"></span>
+  <span class="copied-label hide">Copied to clipboard</span>
+</div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>Write</td>
+          <td class="share-link share-link-write">
+          
+
+
+<div class="copy-container hide" title="Click to copy">
+  <i class="icon icon-copy"></i>
+  <span class="copy-label"></span>
+  <span class="copied-label hide">Copied to clipboard</span>
+</div>
+
+          </td>
+        </tr>
+      </table>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span8">
+      <h5>Collaborators</h5>
+    </div>
+  </div>
+  <div class="share-section share-explicit">
+    <div id="shareProjectModal-collaborators">
+      <table class="table table-hover">
+        <tr class="hidden-row">
+          <td class="user-name" data-user-id=""></td>
+          <td class="user-permission-container">
+            <select class="select-small user-permission">
+              <option value="READ">Reader</option>
+              <option value="WRITE">Writer</option>
+            </select>
+          </td>
+          <td class="remove-user-button-container">
+            <button type="button" class="close remove-user" disabled>×</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="shareProjectModal-invitation">
+      <table class="table">
+        <tr>
+          <td valign="top">
+            <input type="text" id="shareProjectModal-email" class="non-submit" placeholder="Type email here&hellip;"><br>
+            <span id="shareProjectModal-emailHelpBlock" class="help-block form-help-text">
+              <i class="icon-warning-sign"></i>&nbsp;<span class="help-msg-text"></span>
+            </span>
+          </td>
+          <td class="user-permission-container" valign="top">
+            <select id="shareProjectModal-permission" class="select-small user-permission">
+              <option value="READ">Reader</option>
+              <option value="WRITE">Writer</option>
+            </select>
+          </td>
+          <td class="add-new-user-button-container" valign="top">
+            <a id="shareProjectModal-addNewUser" class="btn btn-small btn-primary" href="javascript:void(0)">Add</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="help-text">
+            We will send an email with invitation link to the specified addresses. Email recipients will need to sign in to Papeeria and click invitation link to join your project. Links are valid until clicked or access removed.      <a href="http://blog.papeeria.com/2014/11/help-project-sharing.html">Learn more</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <textarea class="span12 message" placeholder="Add a message&hellip;"></textarea>
+  <p class="text-error hide modal-error"></p>
+  <p class="text-info hide modal-info"></p>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Done</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+<form class="fileUploadForm hide" id="fileUploadModal-form" enctype="multipart/form-data" method="post">
+  
+
+<div class="modal modal-base hide" id="fileUploadModal">
+  <div class="modal-header desktop-only">
+  <button type="button" class="close modal-close">&times;</button>
+  <div>
+    <h3 class="modal-title">&quot;Upload Files&quot;</h3>
+    <span class="modal-subtitle form-help-text"></span>
+  </div>
+</div>
+  <div class="modal-header mobile-only">
+  <h3 class="modal-title">&quot;Upload Files&quot;</h3>
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close">Cancel</button>
+    <button type="submit" class="btn btn-primary modal-submit basic-file-upload">Upload</button>
+    <button type="button" class="btn btn-primary modal-submit-async async-file-upload">Upload</button>
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <div class="directory-picker control-group row-fluid">
+    <div>
+      <label class="control-label span3" for="upload-modal-target-dir">Upload to</label>
+      <div class="right-column">
+        <select id="upload-modal-target-dir" class="dirs-list span8"></select>
+        <button class="new-subdir-toggle btn span4" type="button">
+          New subfolder&nbsp;<span class="icon-caret-down"></span>
+        </button>
+      </div>
+    </div>
+
+    <label class="new-subdir-controls">
+      <span class="control-label span3">New subfolder</span>
+      <div class="right-column">
+        <input class="new-subdir span8" type="text" placeholder="new subfolder name">
+      </div>
+    </label>
+  </div>
+
+  <div class="fileupload fileupload-new basic-file-upload row-fluid" data-provides="fileupload">
+    <label>
+      <span class="control-label span3">File</span>
+      <div class="span8 input-append">
+        <div class="uneditable-input">
+          <i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span>
+        </div>
+        <span class="btn btn-file">
+          <span class="fileupload-new">Select file</span>
+          <span class="fileupload-exists">Change</span>
+          <input class="fileupload-input" type="file" name="file"/>
+          
+          <input class="fileupload-path" type="hidden" name="path"/>
+          
+          <input class="fileupload-opened" type="hidden" name="openedFile"/>
+        </span>
+        <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+      </div>
+    </label>
+  </div>
+
+  
+
+  <div class="async-files-list control-group row-fluid">
+    <span class="control-label span3">Files</span>
+    <div class="table-container right-column">
+      <table class="table table-hover">
+        <tr class="hidden-row">
+          <td class="name"></td>
+          <td><span class="status"></span></td>
+          <td><button type="button" class="close remove-file">&times;</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="async-modal-control control-group async-file-upload row-fluid">
+    <span class="control-label span3 empty-control">&nbsp;</span>
+    <div class="span8 right-column">
+      <span class="btn btn-file">
+        <span class="async-add-files-btn">Choose files&amp;hellip;</span>
+        <input class="async-fileupload-input" type="file" name="files[]" multiple />
+      </span>
+    </div>
+  </div>
+
+  
+  <label class="overwrite-files row-fluid">
+    <span class="span3 empty-control">&nbsp;</span>
+    <span class="span8">
+      <input class="overwrite-files-control" type="checkbox" name="overwriteFiles">
+      Overwrite existing files
+    </span>
+  </label>
+
+  
+
+
+
+  <p class="text-warning hide modal-warning"></p>
+  <p class="text-error hide modal-error"></p>
+
+  <div class="mobile-footer mobile-only">
+    <span class="basic-file-upload footer-tip">
+    Uploading multiple files? Try <button class="btn btn-link toggle-uploader" type="button">enhanced uploader</button>.
+    </span>
+    <span class="async-file-upload footer-tip">
+    Having problems? Try <button class="btn btn-link toggle-uploader" type="button">basic uploader</button>.
+    </span>
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  <span class="basic-file-upload footer-tip pull-left">
+    Uploading multiple files? Try <button class="btn btn-link toggle-uploader" type="button">enhanced uploader</button>.
+  </span>
+  <span class="async-file-upload footer-tip pull-left">
+    Having problems? Try <button class="btn btn-link toggle-uploader" type="button">basic uploader</button>.
+  </span>
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close">Cancel</button>
+    <button type="submit" class="btn btn-primary modal-submit basic-file-upload">Upload</button>
+    <button type="button" class="btn btn-primary modal-submit-async async-file-upload">Upload</button>
+  </div>
+
+</div>
+</div>
+
+</form>
+
+
+
+
+
+<div class="modal modal-base glass-pane hide" id="resync-glasspane">
+  <div class="modal-header"><h3>Oops, something is wrong</h3></div>
+  <div class="modal-body">
+  <p>
+    Papeeria is out of sync with the server. We&#x27;re syncing, please wait a few seconds.
+    <span class="retry-status">
+      <span class="waiting">
+        <span class="countdown"></span>
+        <a class="retry-now" href="javascript:void(0)">Try now.</a>
+      </span>
+      <span class="retrying">Retrying&hellip;</span>
+      <span class="success text-success">Success!</span>
+    </span>
+  </p>
+  
+  <p>
+    If this message shows up frequently, please
+    <a href="/about/contacts" target="_blank">contact us</a>
+    and provide your unique identifier
+    <code class="session-id"></code>
+  </p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="searchModal">
+  <div class="modal-header desktop-only">
+<button type="button" class="close modal-close">&times;</button>
+<div>
+  <h3 class="modal-title">Full-text search&nbsp;<sup class="label">Preview</sup></h3>
+  
+    <span class="modal-subtitle form-help-text">You can search in the current project only.  <a href="/subscribe/delta">Upgrade to Delta</a> for searching across all projects.</span>
+  
+</div>
+</div>
+  <div class="modal-header mobile-only">
+<h3 class="modal-title">Full-text search</h3>
+
+<div class="modal-controls">
+  <button type="button" class="btn modal-close">Close</button>
+</div>
+
+</div>
+
+  <div class="form-search">
+    <div class="search input-append row-fluid">
+      <input class="search-query span6 non-empty modal-focus" type="text" placeholder="Type search keywords here">
+      <button class="btn btn-info modal-submit" type="submit">Search</button>
+    </div>
+  </div>
+
+  
+<ul class="nav nav-pills result-tabs hide">
+  <li id="latex" class="active"><a href="javascript:void(0);">LaTeX</a></li>
+  <li id="bibtex"><a href="javascript:void(0);">BibTeX</a></li>
+</ul>
+
+<div class="results-list-tpl hide">
+  <div class="result-item-tpl hide">
+    <h5 class="result-name-heading">
+      <a class="result-name" target="_blank" title="Click to open file"></a>
+      <div class="snippets-list hide">
+        <div class="snippet-item-tpl hide" >
+          <div class="snippet-container" title="Click to go to matched text"></div>
+          
+
+
+<div class="copy-container hide" title="Click to copy">
+  <i class="icon icon-copy"></i>
+  <span class="copy-label"></span>
+  <span class="copied-label hide">Copied to clipboard</span>
+</div>
+
+        </div>
+      </div>
+      <div class="more-snippets hide">There are more matches in this file.</div>
+    </h5>
+  </div>
+</div>
+<div class="no-results-info hide">
+  No documents found
+</div>
+
+
+  <div class="modal-footer desktop-only">
+
+<div class="modal-controls">
+  <button type="button" class="btn modal-close">Close</button>
+</div>
+
+<div class="load-more-results-tpl hide">
+  <span class="result-cnt load-more-item"></span>
+  <span class="load-more-label load-more-item">Load more.</span>
+</div>
+<div class="loading-results hide">
+  <i class="icon-spin icon-spinner"></i>&nbsp;Loading results&hellip;
+</div>
+<div class="indexing-projects hide">
+  <i class="icon-spin icon-spinner"></i>
+</div>
+<p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+<div class="modal modal-base hide" id="searchAnonymousModal">
+  <div class="modal-header desktop-only">
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Full-text search</h3>
+    </div>
+  </div>
+  <div class="modal-header mobile-only">
+    <h3 class="modal-title">Full-text search</h3>
+  </div>
+
+  <div class="modal-body">
+    <div class="row-fluid modal-body-container">
+      <div class="search-anonymous alert alert-warning">
+        <strong>You have to be signed in</strong>   <p>Full-text search is available to registered users only.</p><br>   <p>Have you signed up to Papeeria already? Please <a href="/signin">sign in</a> to your account.</p><br>   <o>Otherwise, please sign up. It is free, fast and secure.</p>   <a href="/signup" class="btn btn-success">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="cloneProjectModal">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Clone project</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Clone project</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Clone</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <label class="workspace-only">
+    <span class="control-label span4">Target project</span>
+    <select class="target-project span8"><option value="create-new">Create new&hellip;</option></select>
+  </label>
+
+  <div class="new-project-controls">
+    <label>
+      <span class="control-label span4">New project name</span>
+      <input class="project-name span8" type="text" placeholder="New project name">
+    </label>
+
+    <label>
+      <span class="span4">&nbsp;</span>
+      <input class="public-flag unchecked" type="checkbox">
+      <span class="control-label">Public</span>
+    </label>
+  </div>
+
+  <div class="existing-project-controls workspace-only">
+    <label>
+      <span class="span4">&nbsp;</span>
+      <input class="overwrite-flag unchecked" type="checkbox">
+      <span class="control-label">Overwrite existing files</span>
+    </label>
+  </div>
+
+  <div class="alert privacy-violation-confirmation">
+    <span class="description"><strong>Privacy Warning</strong><br>  You're about to clone private   project <span class="src-project-name"></span> into public project.</span>
+    <label>
+      <input class="privacy-confirm unchecked" type="checkbox">
+      <span class="control-label">Yes, I understand</span>
+    </label>
+  </div>
+
+
+  <div class="directory-picker workspace-only">
+    <hr>
+    <div>
+      <label class="control-label span4" for="clone-modal-target-dir">Target folder</label>
+      <select id="clone-modal-target-dir" class="dirs-list span5"></select>
+      <button class="new-subdir-toggle btn span3">New subfolder&nbsp;<span class="icon-caret-down"></span></button>
+    </div>
+
+    <div class="new-subdir-controls">
+      <label>
+        <span class="control-label span4">New subfolder name</span>
+        <input class="new-subdir span5" type="text" placeholder="New subfolder">
+      </label>
+    </div>
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary ">Clone</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base modal-tabbed hide" id="newProjectModal">
+  <div class="modal-header desktop-only">
+  <button type="button" class="close modal-close">&times;</button>
+  <h3 class="modal-title">New Project</h3>
+  
+    
+    <ul class="nav nav-tabs">
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="empty">Empty</a></li>
+      
+        <li><a href="javascript:void(0)" class="tab-btn" data-tab-id="git">From git</a></li>
+      
+    </ul>
+  
+</div>
+  <div class="modal-header mobile-only">
+  <h3 class="modal-title">New Project</h3>
+  
+  <div class="modal-controls">
+    <button type="button" class="btn btn-mini modal-close">Cancel</button>
+    <button type="button" class="btn btn-mini modal-submit btn-primary">Create</button>
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  
+  
+  
+    <div class="mobile-only tab-btn" data-tab-id="empty">
+      Empty
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="empty">
+  <label>
+    <span class="control-label span4">Name</span>
+    <input class="new-project-name span6 non-empty" type="text" placeholder="project name">
+  </label>
+
+  <label>
+    <span class="control-label checkbox-label span4">Public</span>
+    <input class="new-project-public" type="checkbox">
+  </label>
+
+  <p class="quota-exceeded-warning text-warning hide">You have reached your private project quota limits</p>
+</div>
+  
+    <div class="mobile-only tab-btn" data-tab-id="git">
+      From git
+      <i class="icon icon-caret-right pull-right"></i>
+    </div>
+    <div class="tab-content" data-tab-id="git">
+  <label>
+    <span class="control-label span4">Repository URL</span>
+    <div class="span6">
+      <input class="repo-url span12" type="text" placeholder="https://github.com/deedydas/Deedy-Resume">
+      <div class="form-help-text pull-right repo-restrictions">
+        <i class="icon-warning-sign">&nbsp;</i><span></span>
+        <br><a class="pull-right" href="/help/git/clone-restrictions"  target="_blank">Learn more</a>
+      </div>
+
+
+    </div>
+  </label>
+  
+  <label>
+    <span class="control-label span4">Name</span>
+    <input class="new-project-name span6 non-empty" type="text" placeholder="project name">
+  </label>
+
+  <label>
+    <span class="control-label checkbox-label span4">Public</span>
+    <input class="new-project-public" type="checkbox">
+  </label>
+
+  <p class="quota-exceeded-warning text-warning hide">You have reached your private project quota limits</p>
+
+
+  <div class="branch-section-header section-header">
+    <a href="javascript:void(0)" class="section-title">Branch</a>
+    <i class="icon icon-caret-right"></i>
+  </div>
+  <div class="branch-section hide">
+    <div class="help-line form-help-text">
+      We will checkout this branch and load files from the chosen folder into the new project.
+      <a href="//www.papeeria.com/help/git/import-branch" target="_blank">Learn more</a>
+    </div>
+    <a href="javascript:void(0)" class="reload-branch-section hide pull-right">Reload</a>
+    <label>
+      <span class="control-label span4">Branch</span>
+      <select class="branch non-empty"></select>
+    </label>
+    <label>
+      <span class="control-label span4">Folder</span>
+      <select class="folder non-empty"></select>
+    </label>
+  </div>
+  <div class="public-key-header section-header">
+  <a href="javascript:void(0)" class="section-title">SSH key</a>
+  <i class="icon icon-caret-right"></i>
+</div>
+<div class="public-key-section hide">
+  <div class="help-line form-help-text">
+    Use this key for accessing private repositories.
+    <a href="/help/git/private-access" target="_blank">Learn more</a>
+  </div>
+  <textarea class="public-key-text span12" readonly></textarea>
+</div>
+
+</div>
+  
+  
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn  modal-close">Cancel</button>
+    <button type="button" class="btn  modal-submit btn-primary">Create</button>
+  </div>
+
+  <p class="hide modal-info pull-left"></p>
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="vcs-restore-revision">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Restore project</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Restore project</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close modal-focus">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-danger enabled">Restore</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    <p>
+  This will replace the contents of your project with snapshot <span class="revision-name"></span> created on <span class="revision-date"></span>
+</p>
+<p class="text-warning">Current project state will be lost. You cannot undo this operation.</p>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close modal-focus">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-danger enabled">Restore</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="vcs-new-revision">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">New snapshot</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">New snapshot</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Create</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <label>
+    <span class="control-label span4">Name</span>
+    <input class="name span6 modal-focus non-empty" type="text" placeholder="Snapshot name">
+  </label>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Create</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="vcs-git-sync">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Sync with git repository</h3>
+      <span class="modal-subtitle form-help-text"></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Sync with git repository</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Sync</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <label class="section-header">
+    <input type="checkbox" disabled="disabled" checked>
+    Pull changes from Git
+  </label>
+  <p class="form-help-text">We take all the changes made in git repository since last synchronization point and apply them to your Papeeria project.  <a href="/help/git/sync" target="_blank">Learn more</a></p>
+  <label class="section-header">
+    <input type="checkbox" checked class="push-changes">
+    Push changes from Papeeria
+  </label>
+  <div class="push-changes-form">
+  <label>
+    <span class="control-label span4">Repository URL</span>
+    <input class="url span7" type="text" disabled="disabled">
+  </label>
+  <div class="http-protocol-warning form-help-text error hide">
+    <span class="span4">&nbsp;</span>
+    <span class="span8"><i class="icon-warning-sign"></i>&nbsp;You can only use SSH protocol to push.
+<span class="can-fix">
+  <button type="button" class="btn btn-link fix">Switch to SSH</button>
+</span>
+<span class="cannot-fix">
+  <a href="/help/git/private-access" target="_blank">Learn more</a>
+</span>
+</span>
+    <span class="clearfix"></span>
+  </div>
+  <label>
+    <span class="control-label span4">Your name</span>
+    <input class="committer-name span7 non-empty" type="text" placeholder="John Doe">
+  </label>
+  <label>
+    <span class="control-label span4">Your email</span>
+    <input class="committer-email span7 non-empty" type="text" placeholder="john@example.com">
+  </label>
+  <textarea class="commit-message span12 non-empty modal-focus" rows=4 placeholder="Describe changes you made in Papeeria since last sync"></textarea>
+</div>
+  <div class="public-key-header section-header">
+  <a href="javascript:void(0)" class="section-title">SSH key</a>
+  <i class="icon icon-caret-right"></i>
+</div>
+<div class="public-key-section hide">
+  <div class="help-line form-help-text">
+    Use this key for accessing private repositories.
+    <a href="/help/git/private-access" target="_blank">Learn more</a>
+  </div>
+  <textarea class="public-key-text span12" readonly></textarea>
+</div>
+
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Cancel</button>
+    
+      <button type="button" class="btn modal-submit btn-primary enabled">Sync</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal modal-base hide" id="vcs-git-merge-conflict">
+  <div class="modal-header desktop-only">
+  
+    <button type="button" class="close modal-close">&times;</button>
+    <div>
+      <h3 class="modal-title">Resolving merge conflict</h3>
+      <span class="modal-subtitle form-help-text">Please complete these steps to resolve the conflict.   <a href="/help/git/resolving-merge-conflict" target="_blank">Learn more</a></span>
+    </div>
+  
+</div>
+  <div class="modal-header mobile-only">
+  
+    <h3 class="modal-title">Resolving merge conflict</h3>
+  
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Close</button>
+    
+  </div>
+
+</div>
+
+  <div class="modal-body"><div class="row-fluid modal-body-container">
+    
+  <div class="section-header step1-header">
+    1. Commit Papeeria changes into temp branch
+     <i class="step-done icon-ok"></i> 
+  </div>
+  <div class="step1-content">
+    
+  <label>
+    <span class="control-label span4">Repository URL</span>
+    <input class="url span7" type="text" disabled="disabled">
+  </label>
+  <div class="http-protocol-warning form-help-text error hide">
+    <span class="span4">&nbsp;</span>
+    <span class="span8"><i class="icon-warning-sign"></i>&nbsp;You can only use SSH protocol to push.
+<span class="can-fix">
+  <button type="button" class="btn btn-link fix">Switch to SSH</button>
+</span>
+<span class="cannot-fix">
+  <a href="/help/git/private-access" target="_blank">Learn more</a>
+</span>
+</span>
+    <span class="clearfix"></span>
+  </div>
+  <label>
+    <span class="control-label span4">Your name</span>
+    <input class="committer-name span7 non-empty" type="text" placeholder="John Doe">
+  </label>
+  <label>
+    <span class="control-label span4">Your email</span>
+    <input class="committer-email span7 non-empty" type="text" placeholder="john@example.com">
+  </label>
+  <textarea class="commit-message span12 non-empty modal-focus" rows=4 placeholder="Describe changes you made in Papeeria since last sync"></textarea>
+
+    <div>
+      <button type="button" class="btn btn-success do-step-action pull-right">Commit</button>
+      <span class="clearfix"></span>
+    </div>
+  </div>
+
+  <div class="section-header step2-header">
+    2. Resolve merge conflicts
+     <i class="step-done icon-ok"></i> 
+  </div>
+  <div class="step2-content">
+    <p class="form-help-text">You need to do these steps in the terminal window.   <a href="/help/git/resolving-merge-conflict" target="_blank">Learn more</a></p>
+    <ol>
+      <li>
+        <code>git clone <span class="repo-url"></span></code>
+      </li>
+      <li>
+        <code class="have-repo-name">cd <span class="repo-name"></span></code>
+        <span class="repo-name-unknown">cd to the directory you just cloned repository into</span>
+      </li>
+      <li>
+        <code>git checkout <span class="conflicting-branch"></span></code>
+      </li>
+      <li>
+        <code>git merge origin/<span class="branch-with-code"></span></code>
+      </li>
+      <li>
+        Follow git instructions and resolve conflicts manually
+      </li>
+      <li>
+        <code>git commit</code>
+      </li>
+      <li>
+        <code>git push origin <span class="conflicting-branch"></span></code>
+      </li>
+    </ol>
+    <div class="action-centered">
+      <button type="button" class="btn btn-success do-step-action">I&#x27;ve merged the changes</button>
+      <span class="clearfix"></span>
+    </div>
+  </div>
+
+  <div class="section-header step3-header">
+    3. Switch back to branch <span class="conflicting-branch"></span>
+     <i class="step-done icon-ok"></i> 
+  </div>
+  <div class="step3-content">
+    <p class="form-help-text">Almost done. You may want to checkout the merged version from branch   <span class="conflicting-branch"></span></p>
+    <div class="action-centered">
+      <button type="button" class="btn btn-success do-step-action">Checkout <span class="conflicting-branch"></span></button>
+      <span class="clearfix"></span>
+    </div>
+  </div>
+
+  </div></div>
+
+  <div class="modal-footer desktop-only">
+  
+  <div class="modal-controls">
+    <button type="button" class="btn modal-close ">Close</button>
+    
+  </div>
+
+  <p class="text-error hide modal-error"></p>
+</div>
+</div>
+
+
+
+
+
+
+<div class="discussion-label-tpl hide">
+  <span class="discussion-counter"></span>
+</div>
+
+<div class="discussion-first-tpl discussion hide">
+  <div class="discussion-first-header">
+    <span class="author"></span>
+    <time class="datetime" datetime="" title=""></time>
+    <div class="discussion-first-buttons">
+      <button class="btn-mini btn-minimize close" type="button">Hide</button>
+      <button class="btn-mini btn-resolve close" type="button">Resolve</button>
+    </div>
+  </div>
+  <div class="text">
+    
+  </div>
+  <div class="replies">
+    
+  </div>
+  <div class="reply-input-container">
+    <input class="reply-input" placeholder="Reply&hellip;">
+    <div class="extended hide">
+      <textarea class="small-textarea reply-input-extended"></textarea>
+      <div class="buttons">
+        <button class="btn btn-mini btn-primary btn-reply">Reply</button>
+        <button class="btn btn-mini btn-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="discussion-reply-tpl discussion hide">
+  <div class="discussion-reply-header">
+    <span class="author"></span>
+    <time class="datetime" datetime="" title=""></time>
+    <div class="discussion-reply-buttons">
+      <button class="btn-remove-reply close" type="button">×</button>
+    </div>
+  </div>
+  <div class="text">
+    
+  </div>
+</div>
+
+<div class="comment-box-tpl ace-line-widget ace-line-widget-comment-box">
+  <div class="comment-input-container">
+    <textarea class="small-textarea comment-input-extended" placeholder="Leave a comment"></textarea>
+    <div class="buttons">
+      <button class="btn btn-mini btn-primary btn-comment">Comment</button>
+      <button class="btn btn-mini btn-cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<span class="add-discussion-btn-tpl icon-comment hide"></span>
+
+
+    <script src='/assets/2016-02-26/jsRoutes.js' type='text/javascript'></script>
+    <script src='/assets/2016-02-26/i18n.js' type='text/javascript'></script>
+    <script src='/assets/2016-02-26/javascripts/requirejs-2.1.16.js' type='text/javascript'></script><script type='text/javascript'>
+require.config({
+  baseUrl : "/assets/2016-02-26/javascripts/",
+  paths : {
+    moment : "moment-2.5.1"
+  }
+});
+         </script>
+    <script src='/assets/2016-02-26/javascripts/jquery-1.8.3.js' type='text/javascript'></script><script type="text/javascript">
+  $(function(){
+    $.ajaxSetup({ cache: false });
+  });
+</script><script type="text/javascript">
+  $(function(){
+    // prevent click events on disabled dropdown items and links
+    $(document).on("click", "ul.dropdown-menu > li.disabled > a, ul.dropdown-menu > li.divider, a[disabled], a.disabled", function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      return false;
+    });
+  });
+</script>
+    <script type='text/javascript'>window.constants = $.extend(true, window.constants, {
+  IS_PROD_ENV: true
+});
+
+
+  
+  var uvOptions = {};
+  (function() {
+  var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+  uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/k5SCuCK7v1uqQli1LZEyrQ.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+
+
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38159182-1', 'papeeria.com');
+    ga('send', 'pageview');
+
+
+</script>
+    
+  <script src='/assets/2016-02-26/javascripts/jquery.hotkeys.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/jquery-ui-1.9.1.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/jquery.layout-1.3.0-rc30.74.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/bootstrap.js' type='text/javascript'></script><script type="text/javascript">
+  $(function(){
+    $("[data-toggle=tooltip].init-on-load").tooltip();
+  });
+</script>
+  <script src='/assets/2016-02-26/javascripts/bootstrap-fileupload.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/bootstrap-tagsinput-0.5.0.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/ace-src-noconflict/ace.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/diff_match_patch.js' type='text/javascript'></script>
+  <script src='/assets/2016-02-26/javascripts/md5.js' type='text/javascript'></script>
+  
+  <script src='/assets/2016-02-26/javascripts/ace-src-noconflict/ext-language_tools.js' type='text/javascript'></script>
+  <script type='text/javascript'>
+
+
+
+
+
+
+
+// generate some random string for current edit session.
+// here we generate some random number (PI<=x<PI+1) then convert it to 36-base system
+// (something like 4.2ap51omdwq0lh8pqter60f6r) then discard first two chars
+window.editSessionId = (Math.random() + Math.PI).toString(36).slice(2);
+
+window.projectAccess = {
+  compile: true
+}
+
+window.project = {
+  id: "ee4a366ea56fde7aa2cf2b444fe4e98d",
+  isEditable: true,
+  isArchived: false,
+  isPublic: true,
+  isPlayground: false,
+  readOnly: false,
+  owned: true,
+  name: "latex",
+  hasPriorityCompiling: false,
+  hasRawGnuplot: false
+}
+
+window.constants = $.extend(true, window.constants, {
+  CHANNEL_NAME_SEPARATOR: " ",
+  
+    HEARTBEAT_CHANNEL_NAME: "HEARTBEAT",
+  
+    RAT_CHANNEL_NAME: "RAT",
+  
+    PROJECT_FILES_CHANNEL_NAME: "PROJECT_FILES",
+  
+    COMPILER_CHANNEL_NAME: "COMPILER",
+  
+    FILE_LOCKER_CHANNEL_NAME: "FILE_LOCKER",
+  
+    ERR_CHANNEL_NAME: "ERR",
+  
+  PLOT_CONFIG_FILE_ATTRIBUTE: "gnuplot-config",
+  REFRESH_ACCESS_TOKEN_INTERVAL_SEC: 110,
+  CONTACTS_URL: "http:\/\/www.papeeria.com\/about\/contacts",
+  EMPTY_FILE_TPL_ID: "empty",
+  PAPEERIA_VERSION: '2016-02-26'
+});
+
+window.hosts = $.extend(true, window.hosts, {
+  ADS: 'ads.papeeria.com'
+});
+
+window.user = $.extend(true, window.user, {
+  id: "email:::stevenzmanx@yahoo.com",
+  displayName: "stevenzmanx@yahoo.com",
+  adsId: 'f25b615145c18e4777fb5708a01f53e9',
+  isAnonymous: false,
+  isRegistered: true,
+  capabilities: {
+    PRIVATE_TEMPLATES: false,
+    PRIVATE_GIT_REPO: false
+  }
+});
+
+  window.user.email = "stevenzmanx@yahoo.com";
+
+
+// setup path to dictionaries resources before the editor and spelling checker modules will be defined
+window.dictionariesPath = '\/assets\/2016-02-26\/dictionaries';
+window.alphabet = {
+  de_DE: 'äöüß',
+  fr_FR: 'ÀàÂâÆæÄäÇçÉéÈèÊêËëÎîÏïÔôŒœÖöÙùÛûÜüŸÿ',
+  en_US: 'abcdefghijklmnopqrstuvwxyz',
+  es_ES: 'áéíóúñÑüÜ¡ÁÉÍÓÚ',
+  ru_RU: 'абвгдеёжзийклмнопрстуфхцчшщьыъэюя'
+};
+
+window.locale = $.extend(true, window.locale, {
+  lang: "en"
+});
+
+$(".fileupload").fileupload();
+</script>
+  
+  
+
+    
+      <script type='text/javascript'>require(['desktop-workspace'], function(){ 
+
+
+
+
+require(["shared/alerts", "shared/utils", "workspace/project-structure-widget"], function(alerts, utils, psw) {
+  utils.setupLabelFor();
+  var projectJson = "{\"url\":\"\/p\/ee4a366ea56fde7aa2cf2b444fe4e98d\",\"id\":\"ee4a366ea56fde7aa2cf2b444fe4e98d\",\"name\":\"latex\",\"engine\":\"XELATEX\",\"encoding\":\"UTF_8\",\"compilerFlags\":0,\"pdfUrl\":\"\/d\/pdf\/ee4a366ea56fde7aa2cf2b444fe4e98d\/latex.pdf\",\"previewUrl\":\"\/d\/file\/ee4a366ea56fde7aa2cf2b444fe4e98d\/%25s.png\/ee4a366ea56fde7aa2cf2b444fe4e98d\",\"access\":[{\"userName\":\"stevenzmanx@yahoo.com\",\"userId\":\"email:::stevenzmanx@yahoo.com\",\"userDashboard\":\"\/u\/email\/stevenzmanx@yahoo.com\",\"value\":\"OWNER\"}],\"files\":[{\"id\":\"cb812076cb6661771e97056922de6ce4\",\"name\":\"empty.tex\",\"path\":\"\/\",\"directory\":false}],\"isTemplate\":false,\"isArchived\":false,\"isPublic\":true}";
+  psw.init(utils.stringToJson(projectJson));
+  
+  window.onload = function() {
+    
+  
+    
+  
+    
+  
+    
+  };
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+require(["workspace/desktop/tour"], function(tour) {
+  
+    landingTour = [ 
+{
+  selector: "#project-dropdown",
+  text: "<p>Actions for creating new documents and projects sit in the <b>Workspace Dropdown<\/b><\/p>",
+}
+, 
+{
+  selector: "#project-structure",
+  text: "<p><b>Project pane<\/b> shows a list of files in your project.<\/p><br>    <p>Don\'t miss context menu which appears when you hover over a file<\/p>",
+  placement: "right"
+}
+, 
+{
+  selector: ".pane-editor-anchor",
+  text: "<p><b>Text editor<\/b> with real-time collaboration, syntax highlighting, text folding, autocompletion and spellchecker<\/p>",
+  placement: "right"
+}
+, 
+{
+  selector: "#pane-editor .btn-maximize, #pane-editor .pane-settings",
+  text: "<p>Maximize it if needed and\/or change settings<\/p>",
+}
+, 
+{
+  selector: "#compile-widget",
+  text: "<p><b>Compile widget<\/b> compiles your project (<i>hot key: Ctrl+F9<\/i>).<\/p><br>      <p>Expand dropdown to access recently compiled targets and to choose TeX engine<\/p>",
+}
+, 
+{
+  selector: ".pane-pdf-anchor",
+  text: "<p>If your project has compiled successfully, <b>PDF viewer<\/B> shows you the result.<\/p>",
+  placement: "left"
+}
+, 
+{
+  selector: "#pane-pdf .pane-settings-toggler, #pane-pdf .pane-settings",
+  text: "<p>Use settings pane to choose a native PDF viewer or Google Docs viewer<\/p>",
+}
+, 
+{
+  selector: "#compilation-log-labels",
+  text: "<p><b>Log Pane<\/b> shows errors and warnings from the compiler<\/p>",
+  placement: "top"
+}
+, 
+{
+  selector: "#share-project",
+  text: "<p>Papeeria is collaborative! <b>Share button<\/b> gives your colleagues access to your project, and you can edit documents        in real-time mode<\/p>",
+}
+ ];
+    $("#landing-tour").click(function() { tour.start(landingTour) });
+  
+});
+ })</script>
+    
+    
+  </body>
+</html>
+
