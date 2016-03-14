@@ -1,0 +1,1663 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 MAR 2016 01:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Final_Analysis.tex
+(./Final_Analysis.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(./Final_Analysis.aux)
+\openout1 = `Final_Analysis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen109
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen110
+\MPnumerator=\count92
+\makeMPintoPDFobject=\count93
+\everyMPtoPDFconversion=\toks16
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 55.
+Package color Info: Redefining color shadecolor on input line 60.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 62.
+
+Overfull \hbox (344.48012pt too wide) in paragraph at lines 62--62
+[][]\OT1/cmtt/m/n/10 mortDat[] []<-[] []read.csv[][]([][]"https://www.dropbox.c
+om/s/jsfh8rq2ez0wsj8/ReformattedManateeMortalityData.csv?dl=1"[][])[] []\OT1/cm
+tt/m/it/10 #Loads in mortality data [][] 
+ []
+
+
+Overfull \hbox (291.98058pt too wide) in paragraph at lines 63--63
+[][]\OT1/cmtt/m/n/10 cReg[] []<-[] []read.csv[][]([][]"https://www.dropbox.com/
+s/mpxmf4qn7aelr9v/CountyRegions.csv?dl=1"[][])[] []\OT1/cmtt/m/it/10 #Loads Cla
+ssifier for Country Region[][] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 65--65
+[][]\OT1/cmtt/m/n/10 b[] []<-[] []mortDat[][]$[][]County[mortDat[][]$[][]County
+[] []==[] []c[][](cReg[][]$[][]North.West.Central[[][]1[][]])][][] 
+ []
+
+
+Overfull \hbox (108.23218pt too wide) in paragraph at lines 67--67
+[][]\OT1/cmtt/m/n/10 southCentralWest[] []<-[] []vector[][]([][]length[] []=[] 
+[]length[][](mortDat[][]$[][]County))[] []\OT1/cmtt/m/it/10 #Holds booleans for
+ region[][] 
+ []
+
+
+Overfull \hbox (108.23218pt too wide) in paragraph at lines 68--68
+[][]\OT1/cmtt/m/n/10 northWestCentral[] []<-[] []vector[][]([][]length[] []=[] 
+[]length[][](mortDat[][]$[][]County))[] []\OT1/cmtt/m/it/10 #Holds booleans for
+ region[][] 
+ []
+
+
+Overfull \hbox (108.23218pt too wide) in paragraph at lines 69--69
+[][]\OT1/cmtt/m/n/10 northEastCentral[] []<-[] []vector[][]([][]length[] []=[] 
+[]length[][](mortDat[][]$[][]County))[] []\OT1/cmtt/m/it/10 #Holds booleans for
+ region[][] 
+ []
+
+
+Overfull \hbox (108.23218pt too wide) in paragraph at lines 70--70
+[][]\OT1/cmtt/m/n/10 southCentralEast[] []<-[] []vector[][]([][]length[] []=[] 
+[]length[][](mortDat[][]$[][]County))[] []\OT1/cmtt/m/it/10 #Holds booleans for
+ region[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 77.
+
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+
+Overfull \hbox (195.74529pt too wide) in paragraph at lines 78--78
+[]  []\OT1/cmtt/m/n/10 southCentralWest[] []<-[] [](southCentralWest[] []|[] []
+(mortDat[][]$[][]County[] []==[] []as.character[][](cReg[][]$[][]South.Central.
+West[i])))[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 85.
+
+Overfull \hbox (195.74529pt too wide) in paragraph at lines 88--88
+[]  []\OT1/cmtt/m/n/10 northWestCentral[] []<-[] [](northWestCentral[] []|[] []
+(mortDat[][]$[][]County[] []==[] []as.character[][](cReg[][]$[][]North.West.Cen
+tral[i])))[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 95.
+
+Overfull \hbox (195.74529pt too wide) in paragraph at lines 98--98
+[]  []\OT1/cmtt/m/n/10 northEastCentral[] []<-[] [](northEastCentral[] []|[] []
+(mortDat[][]$[][]County[] []==[] []as.character[][](cReg[][]$[][]North.East.Cen
+tral[i])))[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 105.
+
+Overfull \hbox (195.74529pt too wide) in paragraph at lines 108--108
+[]  []\OT1/cmtt/m/n/10 southCentralEast[] []<-[] [](southCentralEast[] []|[] []
+(mortDat[][]$[][]County[] []==[] []as.character[][](cReg[][]$[][]South.Central.
+East[i])))[][] 
+ []
+
+[1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package color Info: Redefining color shadecolor on input line 115.
+
+Overfull \hbox (90.7462pt too wide) in paragraph at lines 117--117
+[][]\OT1/cmtt/m/n/10 checker[] []=[] []southCentralWest[] []|[] []northWestCent
+ral[] []|[] []northEastCentral[] []|[] []southCentralEast[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 123.
+
+Overfull \hbox (71.4825pt too wide) in paragraph at lines 137--137
+[][]\OT1/cmtt/m/n/10 mortDat[,[] []"Season"[][]][] []=[] []ifelse[][]([][]1[][]
+==[][]1[][], F,F)[] []\OT1/cmtt/m/it/10 #Initialize a empty vector for season. 
+[][] 
+ []
+
+[2]
+Package color Info: Redefining color shadecolor on input line 166.
+Package color Info: Redefining color shadecolor on input line 174.
+Package color Info: Redefining color shadecolor on input line 182.
+Package color Info: Redefining color shadecolor on input line 190.
+Package color Info: Redefining color shadecolor on input line 200.
+
+Overfull \hbox (185.24538pt too wide) in paragraph at lines 202--202
+[][]\OT1/cmtt/m/n/10 mortDat[[][]"Collision"[][]][] []<-[] []ifelse[][](mortDat
+[][]$[][]Probable.Cause[] []==[] []"Human Related: Watercraft Collision"[][], T
+, F)[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 210.
+
+Overfull \hbox (18.98296pt too wide) in paragraph at lines 212--212
+[][]\OT1/cmtt/m/n/10 aggregate[][](Collision[] []~[] []Sex, mortDat, length)[] 
+[]\OT1/cmtt/m/it/10 #Counting Sex Information[][] 
+ []
+
+
+Overfull \hbox (66.23254pt too wide) in paragraph at lines 221--221
+[][]\OT1/cmtt/m/n/10 aggregate[][](Collision[] []~[] []Region, mortDat, length)
+[] []\OT1/cmtt/m/it/10 #Counting the region frequency [][] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 231--231
+[][]\OT1/cmtt/m/n/10 max[][]([][]aggregate[][](Collision[] []~[] []Waterway, mo
+rtDat, length)[[][]"Collision"[][]])[][] 
+ []
+
+
+Overfull \hbox (18.98296pt too wide) in paragraph at lines 237--237
+[][]\OT1/cmtt/m/n/10 aggregate[][](Collision[] []~[] []County, mortDat, length)
+[] []\OT1/cmtt/m/it/10 # Much more meaningful[][] 
+ []
+
+
+Overfull \hbox (186.98149pt too wide) in paragraph at lines 288--288
+[][]\OT1/cmtt/m/n/10 aggregate[][](Collision[] []~[] []Sex, mortDat, sum)[] []\
+OT1/cmtt/m/it/10 # Males have a higher incidence of collisions but marginally[]
+[] 
+ []
+
+[3] [4]
+Package color Info: Redefining color shadecolor on input line 310.
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 312--312
+[][]\OT1/cmtt/m/n/10 plot[][](Collision[] []~[] []Sizecm, mortDat,[] []pch[] []
+=[] []"|"[][],[]  []xlab[] []=[] []"Manatee size(cm)"[][],[][] 
+ []
+
+
+Overfull \hbox (55.73264pt too wide) in paragraph at lines 317--317
+[][]\OT1/cmtt/m/n/10 points[][](mdf[][]$[][]Sizecm, mdf[][]$[][]Collision,[] []
+pch[] []=[] []"|"[][],[] []col[] []=[] []"blue"[][])[] []\OT1/cmtt/m/it/10 # Mo
+rt Dat Female[][] 
+ []
+
+
+Overfull \hbox (55.73264pt too wide) in paragraph at lines 318--318
+[][]\OT1/cmtt/m/n/10 points[][](mdm[][]$[][]Sizecm, mdm[][]$[][]Collision,[] []
+pch[] []=[] []"|"[][],[] []col[] []=[] []"green"[][])[]  []\OT1/cmtt/m/it/10 # 
+Mort Dat Male[][] 
+ []
+
+<figure/unnamed-chunk-14-1.pdf, id=22, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-14-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-14-1.pdf used on input line 321.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 321--322
+[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 327.
+[5]
+Overfull \hbox (39.98277pt too wide) in paragraph at lines 329--329
+[][]\OT1/cmtt/m/n/10 wc[] []<-[] []mortDat[mortDat[[][]^^MCollision^^M[][]][] [
+]==[] []TRUE[][], ][]  []\OT1/cmtt/m/it/10 #Population with collision[][] 
+ []
+
+
+Overfull \hbox (55.73264pt too wide) in paragraph at lines 330--330
+[][]\OT1/cmtt/m/n/10 nc[] []<-[] []mortDat[mortDat[[][]^^MCollision^^M[][]][] [
+]==[] []FALSE[][], ][] []\OT1/cmtt/m/it/10 #Population without collision[][] 
+ []
+
+
+Overfull \hbox (97.73227pt too wide) in paragraph at lines 332--332
+[][]\OT1/cmtt/m/n/10 aggregate[][](Collision[] []~[] []Season, wc, length)[] []
+\OT1/cmtt/m/it/10 #Some Evidence of a difference by Season. [][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 345.
+
+Overfull \hbox (185.24538pt too wide) in paragraph at lines 350--350
+[][]\OT1/cmtt/m/n/10 barplot[][](season.freq,[] []col[][]=colors,[]        []le
+gend[] []=[] []rownames[][](season.freq),[] []main[][]=[][]"Number of Collision
+s "[][])[][] 
+ []
+
+[6 <./figure/unnamed-chunk-14-1.pdf>]
+<figure/unnamed-chunk-16-1.pdf, id=35, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-16-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-16-1.pdf used on input line 353.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 353--354
+[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 359.
+
+Overfull \hbox (228.98112pt too wide) in paragraph at lines 372--372
+[][]\OT1/cmtt/m/n/10 altP[] []<-[] []alt[alt[][]$[][]Collision[] []==[] []TRUE[
+][],[] []c[][]([][]"Region"[][],[] []"Sex"[][],[] []"Sizecm"[][],[] []"Season"[
+][],[] []"Collision"[][])][] []\OT1/cmtt/m/it/10 #Collision population[][] 
+ []
+
+
+Overfull \hbox (260.48085pt too wide) in paragraph at lines 373--373
+[][]\OT1/cmtt/m/n/10 altNP[] []<-[] []alt[alt[][]$[][]Collision[] []==[] []FALS
+E[][],[] []c[][]([][]"Region"[][],[] []"Sex"[][],[] []"Sizecm"[][],[] []"Season
+"[][],[] []"Collision"[][])][] []\OT1/cmtt/m/it/10 #Non-Collision population[][
+] 
+ []
+
+
+Overfull \hbox (185.24538pt too wide) in paragraph at lines 374--374
+[][]\OT1/cmtt/m/n/10 altR[] []<-[] []rbind[][](altP[[][]sample[][]([][]1[][]:[]
+[]length[][](altP[][]$[][]Region),[] []500[][]),], altNP[[][]sample[][]([][]1[]
+[]:[][]length[][](altNP[][]$[][]Region),[] []500[][]),])[][] 
+ []
+
+[7 <./figure/unnamed-chunk-16-1.pdf>]
+Package color Info: Redefining color shadecolor on input line 380.
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 383--383
+[][]\OT1/cmtt/m/n/10 altR[][]$[][]Region[] []<-[] []as.numeric[][]([][]factor[]
+[](altR[][]$[][]Region ,[] []levels[][]=[][]unique[][](alt[][]$[][]Region)))[][
+] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 385--385
+[][]\OT1/cmtt/m/n/10 altR[][]$[][]Season[] []<-[] []as.numeric[][]([][]factor[]
+[](altR[][]$[][]Season ,[] []levels[][]=[][]unique[][](alt[][]$[][]Season)))[][
+] 
+ []
+
+
+Overfull \hbox (90.7462pt too wide) in paragraph at lines 386--386
+[][]\OT1/cmtt/m/n/10 altR[][]$[][]Collision[] []<-[] []as.numeric[][]([][]facto
+r[][](altR[][]$[][]Collision ,[] []levels[][]=[][]unique[][](alt[][]$[][]Collis
+ion)))[][] 
+ []
+
+
+Overfull \hbox (158.9956pt too wide) in paragraph at lines 418--418
+[][]\OT1/cmtt/m/n/10 fig[] []<-[] []ordiplot[][](c.mds,[] []type[] []=[] []"non
+e"[][],[] []main[] []=[] []"NMDS for Collision and Non-Collision Communities"[]
+[])[][] 
+ []
+
+
+Overfull \hbox (143.24574pt too wide) in paragraph at lines 419--419
+[][]\OT1/cmtt/m/n/10 points[][](fig,[] []"sites"[][],[] []pch[][]=[][]16[][],[]
+ []col[][]=[][]c[][]([][]"dodgerblue"[][],[] []"red"[][])[altR[][]$[][]Collisio
+n],[] []bg[][]=[][]"white"[][],[] []cex[][]=[][]1.1[][])[][] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 420--420
+[][]\OT1/cmtt/m/n/10 ordihull[][](c.mds, altR[][]$[][]Collision[] []==[] []"2"[
+][],[] []display[] []=[] []"sites"[][],[] []draw[] []=[] []"polygon"[][])[][] 
+ []
+
+<figure/unnamed-chunk-18-1.pdf, id=46, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-1.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-1.pdf used on input line 423.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 423--424
+[][] 
+ []
+
+[8]
+Overfull \hbox (342.744pt too wide) in paragraph at lines 428--428
+[][]\OT1/cmtt/m/n/10 pairs[][](altR[,[][]6[][]:[][]7[][]],[] []col[][]=[] []c[]
+[]([][]"dodgerblue"[][],[] []"red"[][])[altR[][]$[][]Collision],[] []pch[] []=[
+] []16[][],[] []main[] []=[] []"NMDS for Collision and Non-Collision Communitie
+s"[][])[][] 
+ []
+
+<figure/unnamed-chunk-18-2.pdf, id=50, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-18-2.pdf Graphic file (type pdf)
+
+<use figure/unnamed-chunk-18-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-18-2.pdf used on input line 431.
+(pdftex.def)             Requested size: 345.0pt x 345.00414pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 431--432
+[][] 
+ []
+
+[9 <./figure/unnamed-chunk-18-1.pdf>]
+Package color Info: Redefining color shadecolor on input line 437.
+
+Overfull \hbox (323.4803pt too wide) in paragraph at lines 445--445
+[][]\OT1/cmtt/m/n/10 subset[] []<-[] []mortD[[][]c[][]([][]"Sizecm"[][],[][]"Re
+gion"[][],[] []"Sex"[][],[] []"Season"[][],[][]"Collision"[][])][] []\OT1/cmtt/
+m/it/10 #Subsets data to the explanatory and reposn variables only. [][] 
+ []
+
+
+Overfull \hbox (216.7451pt too wide) in paragraph at lines 446--446
+[][]\OT1/cmtt/m/n/10 maximal[] []<-[] []glm[][](Collision[] []~[] []Sizecm[][]*
+[][]Region[][]*[][]Sex[][]*[][]Season,[] []data[] []= subset,[] []family[] []= 
+binomial,[] []na.action[] []= na.fail)[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 452.
+[10 <./figure/unnamed-chunk-18-2.pdf>]
+Overfull \hbox (286.73062pt too wide) in paragraph at lines 454--454
+[][]\OT1/cmtt/m/n/10 model[] []<-[] []glm[][](Collision[] []~[] []Sizecm[][]*[]
+[]Region[][]*[][]Sex[][]*[][]Season,[] []data[] []= mortD,[] []family[] []= bin
+omial,[] []na.action[] []= na.fail)[] []\OT1/cmtt/m/it/10 # Maximal Model[][] 
+ []
+
+
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## glm(formula = Collision ~ Sizecm * Region * Sex * Season,
+ family = binomial,[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ##                                                   Estimat
+e Std. Error[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## (Intercept)                                     -3.979275
+3  1.4904950[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm                                           0.010510
+9  0.0053728[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral                          -1.477044
+5  4.2154018[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast                          -0.237486
+2  1.6135738[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest                           0.918284
+0  1.5967759[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM                                             1.664554
+3  1.8710938[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SeasonSpring                                     0.985843
+7  1.6836772[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SeasonSummer                                     1.237879
+3  1.6882345[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SeasonWinter                                    -1.566399
+4  2.2063178[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral                    0.009104
+1  0.0167030[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast                    0.000492
+1  0.0058147[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest                   -0.002017
+4  0.0057789[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM                                     -0.002789
+6  0.0068306[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM                     -1.043121
+8  7.0328503[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM                     -2.003641
+5  2.0626063[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM                     -2.574847
+9  2.0450856[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonSpring                             -0.000655
+7  0.0060754[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonSummer                             -0.003811
+7  0.0060281[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonWinter                              0.003354
+5  0.0081739[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonSpring              1.308638
+6  4.5601541[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonSpring             -1.026791
+6  1.8505785[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonSpring             -0.982342
+9  1.8132461[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonSummer              0.732256
+2  5.2893006[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonSummer             -0.931853
+3  1.8636635[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonSummer             -1.780469
+9  1.8348033[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonWinter              1.554124
+7  6.3392272[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonWinter              1.209984
+3  2.3350573[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonWinter              0.331215
+2  2.3322402[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonSpring                               -6.251161
+5  2.4824137[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonSummer                               -3.682101
+7  2.2920365[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonWinter                               -0.604293
+2  3.0577212[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM              -0.003567
+4  0.0254683[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM               0.005326
+2  0.0075449[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM               0.006211
+6  0.0075196[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SeasonSpring      -0.012853
+1  0.0179025[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SeasonSpring       0.002295
+4  0.0066838[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SeasonSpring       0.001106
+9  0.0065784[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SeasonSummer      -0.010728
+9  0.0205092[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SeasonSummer       0.003266
+2  0.0066546[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SeasonSummer       0.007438
+2  0.0065887[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SeasonWinter      -0.009854
+3  0.0266129[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SeasonWinter      -0.002193
+4  0.0086336[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SeasonWinter      -0.001684
+1  0.0086384[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonSpring                         0.021078
+5  0.0089779[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonSummer                         0.013485
+3  0.0083013[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonWinter                        -0.002224
+5  0.0115304[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM:SeasonSpring         2.549911
+9  7.6373634[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM:SeasonSpring         6.264966
+3  2.7052993[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM:SeasonSpring         6.315896
+3  2.6766517[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM:SeasonSummer         2.831448
+7  8.2198145[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM:SeasonSummer         3.271806
+7  2.5471781[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM:SeasonSummer         3.157881
+5  2.5416806[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM:SeasonWinter         1.697856
+7  9.5858797[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM:SeasonWinter         0.996275
+3  3.2440849[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM:SeasonWinter         1.589794
+8  3.2494577[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM:SeasonSpring  0.003179
+5  0.0279352[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM:SeasonSpring -0.021914
+0  0.0098254[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM:SeasonSpring -0.022494
+4  0.0097599[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM:SeasonSummer -0.000746
+4  0.0299511[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM:SeasonSummer -0.010961
+5  0.0092528[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM:SeasonSummer -0.010573
+7  0.0093010[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM:SeasonWinter -0.002341
+4  0.0370964[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM:SeasonWinter -0.000311
+3  0.0122189[] 
+ []
+
+
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM:SeasonWinter -0.001607
+5  0.0122604[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ##                                                 z value P
+r(>|z|)[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## (Intercept)                                      -2.670  
+0.00759 **[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm                                            1.956  
+0.05043 .[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral                           -0.350  
+0.72604[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast                           -0.147  
+0.88299[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest                            0.575  
+0.56523[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM                                              0.890  
+0.37367[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SeasonSpring                                      0.586  
+0.55819[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SeasonSummer                                      0.733  
+0.46341[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SeasonWinter                                     -0.710  
+0.47773[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral                     0.545  
+0.58571[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast                     0.085  
+0.93255[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest                    -0.349  
+0.72702[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM                                      -0.408  
+0.68298[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM                      -0.148  
+0.88209[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM                      -0.971  
+0.33134[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM                      -1.259  
+0.20802[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonSpring                              -0.108  
+0.91405[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonSummer                              -0.632  
+0.52718[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonWinter                               0.410  
+0.68152[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonSpring               0.287  
+0.77413[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonSpring              -0.555  
+0.57900[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonSpring              -0.542  
+0.58798[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonSummer               0.138  
+0.88989[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonSummer              -0.500  
+0.61707[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonSummer              -0.970  
+0.33185[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonWinter               0.245  
+0.80633[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonWinter               0.518  
+0.60433[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonWinter               0.142  
+0.88707[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonSpring                                -2.518  
+0.01180 *[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonSummer                                -1.606  
+0.10817[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonWinter                                -0.198  
+0.84334[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM               -0.140  
+0.88860[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM                0.706  
+0.48023[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM                0.826  
+0.40877[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SeasonSpring       -0.718  
+0.47279[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SeasonSpring        0.343  
+0.73128[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SeasonSpring        0.168  
+0.86638[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SeasonSummer       -0.523  
+0.60089[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SeasonSummer        0.491  
+0.62356[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SeasonSummer        1.129  
+0.25892[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SeasonWinter       -0.370  
+0.71117[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SeasonWinter       -0.254  
+0.79946[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SeasonWinter       -0.195  
+0.84543[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonSpring                          2.348  
+0.01888 *[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonSummer                          1.624  
+0.10428[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonWinter                         -0.193  
+0.84702[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM:SeasonSpring          0.334  
+0.73848[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM:SeasonSpring          2.316  
+0.02057 *[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM:SeasonSpring          2.360  
+0.01829 *[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM:SeasonSummer          0.344  
+0.73050[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM:SeasonSummer          1.284  
+0.19897[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM:SeasonSummer          1.242  
+0.21407[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM:SeasonWinter          0.177  
+0.85941[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM:SeasonWinter          0.307  
+0.75876[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM:SeasonWinter          0.489  
+0.62467[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM:SeasonSpring   0.114  
+0.90938[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM:SeasonSpring  -2.230  
+0.02572 *[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM:SeasonSpring  -2.305  
+0.02118 *[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM:SeasonSummer  -0.025  
+0.98012[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM:SeasonSummer  -1.185  
+0.23615[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM:SeasonSummer  -1.137  
+0.25561[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionNorthWestCentral:SexM:SeasonWinter  -0.063  
+0.94967[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralEast:SexM:SeasonWinter  -0.025  
+0.97968[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 608--608
+[]\OT1/cmtt/m/n/10 ## Sizecm:RegionSouthCentralWest:SexM:SeasonWinter  -0.131  
+0.89569[] 
+ []
+
+
+Overfull \hbox (85.49625pt too wide) in paragraph at lines 676--676
+[]\OT1/cmtt/m/n/10 ##     Sex:Season + Sizecm:Region:Sex + Sizecm:Region:Season
+ + Sizecm:Sex:Season +[] 
+ []
+
+
+Overfull \hbox (74.99634pt too wide) in paragraph at lines 676--676
+[]\OT1/cmtt/m/n/10 ##     Sex:Season + Sizecm:Region:Sex + Sizecm:Region:Season
+ + Sizecm:Sex:Season[] 
+ []
+
+
+Overfull \hbox (38.24666pt too wide) in paragraph at lines 676--676
+[]\OT1/cmtt/m/n/10 ## Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex +
+ Region:Sex +[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 676--676
+[]\OT1/cmtt/m/n/10 ##     Sizecm:Season + Region:Season + Sex:Season + Sizecm:S
+ex:Season[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## glm(formula = Collision ~ Sizecm + Region + Sex + Season 
++ Sizecm:Sex +[] 
+ []
+
+
+Overfull \hbox (69.74638pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ##     Sizecm:Sex:Season, family = binomial, data = mortD, n
+a.action = na.fail)[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ##                                       Estimate Std. Error
+ z value Pr(>|z|)[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## (Intercept)                         -3.5588986  0.4598964
+  -7.738 1.01e-14[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm                               0.0098506  0.0014597
+   6.748 1.50e-11[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral              -0.6669296  0.7127040
+  -0.936 0.349390[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast              -0.3498613  0.2639951
+  -1.325 0.185086[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest               0.1258460  0.2587647
+   0.486 0.626731[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SexM                                -0.0807929  0.5870742
+  -0.138 0.890541[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SeasonSpring                         0.4529067  0.5386926
+   0.841 0.400487[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SeasonSummer                        -0.2445034  0.5647746
+  -0.433 0.665071[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SeasonWinter                        -1.6186623  0.5857172
+  -2.764 0.005718[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM                          0.0022902  0.0021008
+   1.090 0.275643[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SexM          0.1580309  0.5725747
+   0.276 0.782548[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SexM         -0.2081688  0.1938159
+  -1.074 0.282798[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SexM         -0.4996420  0.1927597
+  -2.592 0.009541[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonSpring                  0.0004482  0.0017497
+   0.256 0.797839[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonSummer                  0.0007891  0.0018095
+   0.436 0.662758[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SeasonWinter                  0.0013904  0.0018874
+   0.737 0.461330[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonSpring -0.0543141  0.6962555
+  -0.078 0.937821[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonSpring -0.1620992  0.2923679
+  -0.554 0.579281[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonSpring -0.4580531  0.2867128
+  -1.598 0.110131[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonSummer -0.1862646  0.8483267
+  -0.220 0.826208[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonSummer  0.2058133  0.2985816
+   0.689 0.490632[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonSummer  0.4360056  0.2940571
+   1.483 0.138148[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionNorthWestCentral:SeasonWinter -0.4387200  0.8339371
+  -0.526 0.598831[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralEast:SeasonWinter  1.1658173  0.3178515
+   3.668 0.000245[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## RegionSouthCentralWest:SeasonWinter  0.5518911  0.3168227
+   1.742 0.081516[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonSpring                   -0.7388077  0.6850617
+  -1.078 0.280831[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonSummer                   -0.7798668  0.7235299
+  -1.078 0.281094[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## SexM:SeasonWinter                    0.4416666  0.7329603
+   0.603 0.546789[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonSpring             0.0018851  0.0025771
+   0.731 0.464478[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonSummer             0.0039181  0.0027047
+   1.449 0.147443[] 
+ []
+
+
+Overfull \hbox (59.24648pt too wide) in paragraph at lines 766--766
+[]\OT1/cmtt/m/n/10 ## Sizecm:SexM:SeasonWinter            -0.0024947  0.0027598
+  -0.904 0.366013[] 
+ []
+
+
+Overfull \vbox (2.16667pt too high) detected at line 767
+ []
+
+[11]
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+[12]
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+[13] [14] [15]
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 767
+ []
+
+[16]
+Package color Info: Redefining color shadecolor on input line 771.
+
+Overfull \hbox (111.74602pt too wide) in paragraph at lines 773--773
+[][]\OT1/cmtt/m/n/10 stepAICModel[] []<-[] []glm[][]([][]formula[] []= Collisio
+n[] []~[] []Sizecm[] []+[] []Region[] []+[] []Sex[] []+[] []Season[] []+[] []Si
+zecm[][]:[][]Sex[] []+[][] 
+ []
+
+
+Overfull \hbox (64.49643pt too wide) in paragraph at lines 775--775
+[]      []\OT1/cmtt/m/n/10 Sizecm[][]:[][]Sex[][]:[][]Season,[] []family[] []= 
+binomial,[] []data[] []= mortD,[] []na.action[] []= na.fail)[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 781.
+[17]
+Overfull \hbox (90.7462pt too wide) in paragraph at lines 783--783
+[][]\OT1/cmtt/m/n/10 oneStep[]  []<-[] []glm[][]([][]formula[] []= Collision[] 
+[]~[] []Sizecm[] []+[] []Region[] []+[] []Sex[] []+[] []Season[] []+[] []Sizecm
+[][]:[][]Sex[] []+[][] 
+ []
+
+
+Overfull \hbox (127.49588pt too wide) in paragraph at lines 785--785
+[]                  []\OT1/cmtt/m/n/10 Sizecm[][]:[][]Sex[][]:[][]Season,[] []f
+amily[] []= binomial,[] []data[] []= mortD,[] []na.action[] []= na.fail)[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 791.
+
+Overfull \hbox (101.24611pt too wide) in paragraph at lines 793--793
+[][]\OT1/cmtt/m/n/10 oneStepAlt[] []<-[] []glm[][]([][]formula[] []= Collision[
+] []~[] []Sizecm[] []+[] []Region[] []+[] []Sex[] []+[] []Season[] []+[] []Size
+cm[][]:[][]Sex[] []+[][] 
+ []
+
+
+Overfull \hbox (48.74657pt too wide) in paragraph at lines 794--794
+[]                  []\OT1/cmtt/m/n/10 Region[][]:[][]Sex[] []+[] []Sizecm[][]:
+[][]Season[] []+[] []Region[][]:[][]Season[] []+[] []Sex[][]:[][]Season ,[][] 
+ []
+
+
+Overfull \hbox (27.74675pt too wide) in paragraph at lines 795--795
+[]                  []\OT1/cmtt/m/n/10 family[] []= binomial,[] []data[] []= mo
+rtD,[] []na.action[] []= na.fail)[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 803.
+Package color Info: Redefining color shadecolor on input line 814.
+
+Overfull \hbox (552.74217pt too wide) in paragraph at lines 816--816
+[][]\OT1/cmtt/m/n/10 dredgeModel[] []<-[] []glm[][](Collision[] []~[] []Region[
+] []+[] []Season[] []+[] []Sex[] []+[] []Sizecm[] []+[] []Region[][]:[][]Season
+[] []+[] []Region[][]:[][]Sex[] []+[] []Season[][]:[][]Sex[] []+[] []Sex[][]:[]
+[]Sizecm,[] []data[] []= mortD,[] []family[] []= binomial,[] []na.action[] []= 
+na.fail)[][] 
+ []
+
+
+Overfull \hbox (216.7451pt too wide) in paragraph at lines 817--817
+[][]\OT1/cmtt/m/n/10 maximal[] []<-[] []glm[][](Collision[] []~[] []Sizecm[][]*
+[][]Region[][]*[][]Sex[][]*[][]Season,[] []data[] []= subset,[] []family[] []= 
+binomial,[] []na.action[] []= na.fail)[][] 
+ []
+
+Package color Info: Redefining color shadecolor on input line 824.
+
+Overfull \hbox (202.73135pt too wide) in paragraph at lines 828--828
+[][]\OT1/cmtt/m/n/10 print[][]([][]xtable[][]([][]anova[][](maximal, stepAICMod
+el,[] []test[][]=[][]"Chi"[][])))[] []\OT1/cmtt/m/it/10 #Anova Table for maxima
+l model vs Dredge model. [][] 
+ []
+
+
+Overfull \hbox (197.4814pt too wide) in paragraph at lines 846--846
+[][]\OT1/cmtt/m/n/10 print[][]([][]xtable[][]([][]anova[][](maximal, dredgeMode
+l,[] []test[][]=[][]"Chi"[][])))[] []\OT1/cmtt/m/it/10 #Anova Table for maximal
+ model vs Dredge model. [][] 
+ []
+
+
+Overfull \hbox (442.49313pt too wide) in paragraph at lines 864--864
+[][]\OT1/cmtt/m/n/10 print[][]([][]xtable[][]([][]anova[][](maximal, oneStep, o
+neStepAlt, dredgeModel,[] []test[][]=[][]"Chi"[][])))[] []\OT1/cmtt/m/it/10 #An
+ova Table for building down from maximal to AICmodel to dredge model.  [][] 
+ []
+
+[18] [19] (./Final_Analysis.aux) ) 
+Here is how much of TeX's memory you used:
+ 1667 strings out of 493089
+ 24671 string characters out of 6134842
+ 142094 words of memory out of 5000000
+ 5136 multiletter control sequences out of 15000+600000
+ 7923 words of font info for 29 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,6n,25p,481b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb>
+Output written on Final_Analysis.pdf (19 pages, 357456 bytes).
+PDF statistics:
+ 122 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

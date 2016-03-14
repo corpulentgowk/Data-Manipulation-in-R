@@ -209,3 +209,7 @@ model3 <- update(model2, formula=drop.terms(model2$terms, c("Region:Sex:Season")
 aic <- glm(formula = Collision ~ Sizecm + Region + Sex + Season + Sizecm:Sex + 
       Region:Sex + Sizecm:Season + Region:Season + Sex:Season + 
       Sizecm:Sex:Season, family = binomial, data = mortD, na.action = na.fail)
+
+buffer <- sample(c("TRUE"), 9883, replace=TRUE)
+aggregate(buffer~mortDat$Waterway , mortDat, length)
+            
