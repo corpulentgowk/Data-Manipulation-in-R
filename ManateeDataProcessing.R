@@ -248,7 +248,9 @@ library(MASS)
 #alt <- mortDat[,c("Region", "Sex", "Sizecm", "Season")]
 alt <- mortDat[!(mortDat["Sex"] == "U"),]
 alt <- alt[,c("Region", "Sex", "Sizecm", "Season", "Collision")]
-altR <- alt[sample(1:length(alt$Region), 1000), ]
+altP <- alt[alt$Collision == TRUE, c("Region", "Sex", "Sizecm", "Season", "Collision")]
+altNP <- alt[alt$Collision == FALSE, c("Region", "Sex", "Sizecm", "Season", "Collision")]
+altR <- rbind(altP[sample(1:length(altP$Region), 500),], altNP[sample(1:length(altNP$Region), 500),])
 #as.numeric(factor(alt$Region , levels=unique(alt[, 1])))
 altR$Region <- as.numeric(factor(altR$Region , levels=unique(alt$Region)))
 altR$Sex <- as.numeric(factor(altR$Sex , levels=unique(alt$Sex)))
@@ -260,13 +262,13 @@ str(c.mds)
 par(mfcol = c(1,1))
 fig <- ordiplot(c.mds, type = "none", main = "NMDS for Collision and Non-Collision Communities")
 points(fig, "sites", pch=21, col=c("dodgerblue", "red")[altR$Collision], bg="white", cex=1.1)
-ordihull(c.mds, altR$Collision == "2", col="white", display = "sites", draw = "polygon")
+ordihull(c.mds, altR$Collision == "2", display = "sites", draw = "polygon")
 
 
 altR$nmds1 <- c.mds$points[,1]
 altR$nmds2 <- c.mds$points[,2]
 
-pairs(altR[,6:7], col= c("dodgerblue", "red")[altR$Collision], pch = 4, main = "NMDS for Collision and Non-Collision Communities")
+pairs(altR[,6:7], col= c("dodgerblue", "red")[altR$Collision], pch = 21, main = "NMDS for Collision and Non-Collision Communities")
 
 
 library("VGAM")
