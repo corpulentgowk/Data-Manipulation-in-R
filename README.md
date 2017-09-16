@@ -1,7 +1,3 @@
-﻿Data-Manipulation-in-R
-#Data-Manipulation-in-R
-#The Report Detailing everything I did here and my findings can be found here: https://github.com/corpulentgowk/Data-Manipulation-in-R/blob/master/finalPaper_Layne.pdf
-
 # Quantitative Analysis of Manatee Mortality in Florida Waterways
 
 The mortality of West Indian Manatees (Trichechus manatus) has been a concern since 1972
